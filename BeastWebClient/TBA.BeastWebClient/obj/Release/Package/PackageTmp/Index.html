@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <script src="Scripts/jquery-2.2.1.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="Scripts/ExternalLibraries/md5.js"></script>
+    <script src="Scripts/Shared/Config.js"></script>
+    <script src="Scripts/Site/VCMCommon.js"></script>
+    <script src="Scripts/Services/AuthenticationService.js"></script>
+</head>
+<body>
+    <div class="form-horizontal">
+        <h4>Login</h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Username</label>
+            <div class="col-md-10">
+                <input type="text" id="Username" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Password</label>
+            <div class="col-md-10">
+                <input type="password" id="Password" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Login" id="checkCredentials" class="btn btn-default" />
+            </div>
+        </div>
+
+        <label id="userMessage"></label>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#checkCredentials').click(function () {
+                var userName = $('input:text[id=Username]').val();
+                var userPassword = $('input:password[id=Password]').val();
+                var password = CryptoJS.MD5(userPassword).toString();
+
+                new AuthenticationService().ValidateUser(userName, password);
+            });
+        });
+    </script>
+</body>
+</html>

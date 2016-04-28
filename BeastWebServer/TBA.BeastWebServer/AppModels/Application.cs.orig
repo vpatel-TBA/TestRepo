@@ -1,0 +1,326 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using BeastClientPlugIn;
+using TBA.BeastWebServer.Interfaces;
+using TBA.BeastWebServer.Parameters;
+using System.Collections.Concurrent;
+using TBA.BeastQos.Models.Interface;
+<<<<<<< HEAD
+using TBA.BeastWebServer.Entities.User;
+using TBA.BeastWebServer.CacheManagers;
+using TBA.CacheService.Implementations;
+=======
+using TBA.BeastQos.Models.Info;
+using TBA.BeastQos.Models.Error;
+>>>>>>> feature/Adding_Exception_and_Log
+
+namespace TBA.BeastWebServer.AppModels
+{
+    public class Application : IApplication
+    {
+
+        #region Private Variable
+
+        private ConcurrentDictionary<string, string> valueStore = null;
+        private readonly ServerAgent serverAgent = null;
+        private Action<IAppParameters> removeApplication = null;
+        private readonly ISignalRResponseAdapter signalRResponseAdapter = null;
+        private readonly IResponseParameters responseParameters = null;
+        private readonly ITBALogService logService = null;
+        private string exportField = string.Empty;
+
+        #endregion
+
+        #region Properties
+
+        public string ExportField
+        {
+            get { return exportField; }
+            set { exportField = value; }
+        }
+
+        public DOMDataDocument ApplicationDoc
+        {
+            get;
+            set;
+        }
+
+        public bool IsApplicationAlive
+        {
+            get;
+            set;
+        }
+
+        public bool IsApplicationStale
+        {
+            get;
+            set;
+        }
+
+        public int ReferenceCount
+        {
+            get;
+            set;
+        }
+
+        public IAppParameters AppParameters
+        {
+            get;
+            set;
+        }
+
+        #endregion
+
+        #region Constructor
+
+        public Application(IAppParameters appParameters, ServerAgent serverAgent, Action<IAppParameters> removeApplication, ISignalRResponseAdapter signalRResponseAdapter, IResponseParameters responseParameters, ITBALogService logService)
+        {
+            AppParameters = appParameters;
+            this.serverAgent = serverAgent;
+            this.removeApplication = removeApplication;
+            this.responseParameters = responseParameters;
+            this.signalRResponseAdapter = signalRResponseAdapter;
+            this.logService = logService;
+            valueStore = new ConcurrentDictionary<string, string>();
+            CreateApplication(appParameters);
+        }
+
+        #endregion
+
+        #region Beast Application Related Method
+
+        private void CreateApplication(IAppParameters appParameters)
+        {
+            try
+            {
+                Scripting.Dictionary properties = new Scripting.Dictionary();
+
+                Object key = "ImpersonatedUser";
+                Object value = appParameters.EmailId;
+                properties.Add(ref key, ref value);
+
+                key = "RequestFieldPropertiesAsNode";
+                value = true;
+                properties.Add(ref key, ref value);
+
+                key = "OnlyVisible";
+                value = 1;
+                properties.Add(ref key, ref value);
+
+                key = "RequestDisplayString";
+                value = true;
+                properties.Add(ref key, ref value);
+
+                key = "RequestFieldProperties";
+                value = false;
+                properties.Add(ref key, ref value);
+
+                ApplicationDoc = serverAgent.RequestDocument("appid:" + appParameters.AppId, properties);
+
+                ApplicationDoc.DocumentAlive += new _IDOMDataDocumentEvents_DocumentAliveEventHandler(ApplicationAlive);
+                ApplicationDoc.DocumentChanged += new _IDOMDataDocumentEvents_DocumentChangedEventHandler(ApplicationDataChange);
+                ApplicationDoc.DocumentComplete += new _IDOMDataDocumentEvents_DocumentCompleteEventHandler(ApplicationComplete);
+                ApplicationDoc.DocumentStale += new _IDOMDataDocumentEvents_DocumentStaleEventHandler(ApplicationStale);
+                ApplicationDoc.StatusChanged += new _IDOMDataDocumentEvents_StatusChangedEventHandler(ApplicationStatusChange);
+
+<<<<<<< HEAD
+            InitApplication(appParameters);
+
+            ICacheAdaptor<UserInfo> cache = new CacheAdaptor<UserInfo>(new RedisService<UserInfo>(), logService);
+            UserInfo userInfo = (UserInfo)cache.GetValueByKey(appParameters.AuthToken);
+            if (userInfo.ImageList == null)
+                userInfo.ImageList = new List<ImageDetail>();
+            userInfo.ImageList.Add(new ImageDetail() { SignalRConnectionId=appParameters.SignalRConnectionId, ImageCreationTime = DateTime.UtcNow, ImageName = appParameters.AppName, ImageSIFID = appParameters.AppId, InstanceID = appParameters.AppInstanceId, LastActivityOn = DateTime.UtcNow });
+            cache.Add(appParameters.AuthToken,userInfo);
+=======
+                InitApplication(appParameters);
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("Application", "CreateApplication", OperationCode.ApplicationCreateFail, ApplicationType.BeastWebServer, DateTime.Now, 0, AppParameters.UserId, "RemoveThis", AppParameters.SignalRConnectionId, AppParameters.AuthToken, AppParameters.AppId, AppParameters.AppName, AppParameters.ClientType, "", exception);
+                throw;
+            }
+>>>>>>> feature/Adding_Exception_and_Log
+        }
+
+        private void InitApplication(IAppParameters appParameters)
+        {
+            responseParameters.AppName = AppParameters.AppName;
+            responseParameters.GroupName = AppParameters.AppKey;
+            responseParameters.SignalRConnectionId = appParameters.SignalRConnectionId;
+        }
+
+        public void OpenApplication(IAppParameters appParameters)
+        {
+            //TODO : Open existing application by instance id.
+        }
+
+        public void UnLoadApplicationEvents()
+        {
+            try
+            {
+                ApplicationDoc.DocumentAlive -= new _IDOMDataDocumentEvents_DocumentAliveEventHandler(ApplicationAlive);
+                ApplicationDoc.DocumentChanged -= new _IDOMDataDocumentEvents_DocumentChangedEventHandler(ApplicationDataChange);
+                ApplicationDoc.DocumentComplete -= new _IDOMDataDocumentEvents_DocumentCompleteEventHandler(ApplicationComplete);
+                ApplicationDoc.DocumentStale -= new _IDOMDataDocumentEvents_DocumentStaleEventHandler(ApplicationStale);
+                ApplicationDoc.StatusChanged -= new _IDOMDataDocumentEvents_StatusChangedEventHandler(ApplicationStatusChange);
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("Application", "UnLoadApplicationEvents", OperationCode.ApplicationUnloadFail, ApplicationType.BeastWebServer, DateTime.Now, 0, AppParameters.UserId, "RemoveThis", AppParameters.SignalRConnectionId, AppParameters.AuthToken, AppParameters.AppId, AppParameters.AppName, AppParameters.ClientType, "", exception);
+            }
+            finally
+            {
+                ApplicationDoc = null;
+            }
+        }
+
+        #endregion
+
+        #region Application Events
+
+        public void ApplicationAlive()
+        {
+            IsApplicationAlive = true;
+            AppParameters.AppInstanceId = ApplicationDoc.Name;
+
+            responseParameters.ElementValue = "true";
+            signalRResponseAdapter.SendApplicationStatusUpdates(responseParameters);
+
+            logService.MakeInfoLog("Application", "ApplicationAlive", OperationCode.ApplicationCreate, ApplicationType.BeastWebServer, DateTime.Now, 0, AppParameters.UserId, "RemoveThis", AppParameters.SignalRConnectionId, AppParameters.AuthToken, AppParameters.AppId, AppParameters.AppName, AppParameters.ClientType, "");
+        }
+
+        public void ApplicationStatusChange(DOMDataDocStatus Status, string info)
+        {
+            try
+            {
+                if (Status == DOMDataDocStatus.DATADOCSTATUS_ERROR)
+                {
+                    IsApplicationAlive = false;
+                    if (removeApplication != null)
+                    {
+                        removeApplication(AppParameters);
+                    }
+
+                    responseParameters.ElementValue = "false";
+                    signalRResponseAdapter.SendApplicationStatusUpdates(responseParameters);
+                }
+                else if (Status == DOMDataDocStatus.DATADOCSTATUS_ALIVE)
+                {
+                    IsApplicationAlive = true;
+                }
+                else if (Status == DOMDataDocStatus.DATADOCSTATUS_NA)
+                {
+                    IsApplicationAlive = false;
+
+                    responseParameters.ElementValue = "false";
+                    signalRResponseAdapter.SendApplicationStatusUpdates(responseParameters);
+                }
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("Application", "ApplicationStatusChange", OperationCode.ApplicationStatusChangeFail, ApplicationType.BeastWebServer, DateTime.Now, 0, AppParameters.UserId, "RemoveThis", AppParameters.SignalRConnectionId, AppParameters.AuthToken, AppParameters.AppId, AppParameters.AppName, AppParameters.ClientType, "", exception);
+            }
+        }
+
+        public void ApplicationStale()
+        {
+            IsApplicationStale = true;
+            IsApplicationAlive = false;
+            //TODO : Send Document status to client
+        }
+
+        public void ApplicationComplete()
+        {
+
+        }
+
+        public void ApplicationDataChange(IDOMDataNodeList changedData)
+        {
+            try
+            {
+                for (int i = 0; i < changedData.Length; i++)
+                {
+                    var _value = changedData[i].DataValue;
+
+                    switch (changedData[i].NodeName)
+                    {
+                        case "7777777":     //For generic export data field. 7 times 7
+                            //string nXMLName = changedData[i].NodeName;
+                            //string nXMLValue = changedData[i].DataValue.ToString();
+                            //ExportField = nXMLValue.ToString();
+                            //_ExportField = nXMLValue.ToString();
+                            break;
+
+                        case "List":
+                            responseParameters.ElementId = changedData[i].ParentNode.NodeID;
+                            responseParameters.ElementValue = changedData[i].DataValue.ToString();
+                            responseParameters.SelectedValue = changedData[i].ParentNode.DataValue.ToString();
+                            signalRResponseAdapter.SendListUpdates(responseParameters);
+                            // Todo : Do Value store for image data.
+                            //AddUpdate_ValueStore(changedData[i].NodeName + "Dummy_" + changedData[i].ParentNode.NodeID, nValue + "#" + changedData[i].ParentNode.DataValue);
+                            break;
+                        case "Properties":
+                            //0 For normal updates, BLANK = 1, NA = 2 and ERROR = 3.
+                            //V=1|M=1|E=1|F=2|R=-1|B=-1|T=50#121#USD.NY"
+                            responseParameters.ElementId = changedData[i].ParentNode.NodeID;
+                            responseParameters.ElementValue = changedData[i].DataValue.ToString();
+                            signalRResponseAdapter.SendPropertyUpdates(responseParameters);
+                            // Todo : Do Value store for image data.
+                            //AddUpdate_ValueStore(changedData[i].NodeName + "Dummy_" + changedData[i].ParentNode.NodeID, nValueP);
+                            break;
+                        case "ToolTip":
+                            responseParameters.ElementId = changedData[i].ParentNode.NodeID;
+                            DOMDataNode domDataNode = ApplicationDoc.get_NodeByID(responseParameters.ElementId);//.get_NamedChild("ToolTip");                                       
+                            if (domDataNode.get_NamedChild("ToolTip") != null)
+                            {
+                                responseParameters.ElementValue = changedData[i].DataValue.ToString();
+                                signalRResponseAdapter.SendToolTipUpdates(responseParameters);
+                                // Todo : Do Value store for image data.
+                                //AddUpdate_ValueStore(changedData[i].NodeName + "Dummy_" + changedData[i].ParentNode.NodeID, nValueT);
+                            }
+                            break;
+                        default:
+                            //0 For normal updates, BLANK = 1, NA = 2 and ERROR = 3.
+                            if (Convert.ToInt32(changedData[i].DataState) == 0)
+                            {
+                                // Todo : Do Value store for image data.
+                                // AddUpdate_ValueStore(changedData[i].NodeName, changedData[i].DataValue.ToString() + "#" + changedData[i].DisplayString);
+                                responseParameters.ElementId = changedData[i].NodeName;
+                                responseParameters.ElementValue = changedData[i].DataValue.ToString();
+                                responseParameters.ElementDisplayValue = changedData[i].DisplayString.ToString();
+                                signalRResponseAdapter.SendCommanUpdates(responseParameters);
+                            }
+                            else
+                            {
+                                // Todo : Do Value store for image data.
+                                // AddUpdate_ValueStore(changedData[i].NodeName, "#");
+                                //responseParameters.ElementId = changedData[i].NodeName;
+                                //responseParameters.ElementValue = "#";
+                                //signalRResponseAdapter.SendCommanUpdates(responseParameters);
+                            }
+                            break;
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("Application", "ApplicationDataChange", OperationCode.ApplicationDocumentChangeFail, ApplicationType.BeastWebServer, DateTime.Now, 0, AppParameters.UserId, "RemoveThis", AppParameters.SignalRConnectionId, AppParameters.AuthToken, AppParameters.AppId, AppParameters.AppName, AppParameters.ClientType, "", exception);
+            }
+        }
+
+        #endregion
+
+        #region Add or Update Value in ValueStore Dictionary
+
+        void AddUpdateValueInValueStore(string nodeName, string nodeValue)
+        {
+
+        }
+
+        #endregion
+
+    }
+}

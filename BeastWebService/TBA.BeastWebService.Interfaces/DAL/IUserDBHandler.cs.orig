@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using TBA.BeastWebService.Models;
+using TBA.BeastWebService.Models.Application;
+using TBA.BeastWebService.Models.AppStore;
+
+namespace TBA.BeastWebService.Interfaces.DAL
+{
+    public interface IUserDBHandler
+    {
+        ClientInfo ValidateUser(string userName, string password);
+        IEnumerable<Category> GetCategories();
+        IEnumerable<Image> GetImageList(int categoryId);
+        int ChangeUserPassword(string userId, string oldPassword, string newPassword);
+        int ForgotUserPassword(string userId, string oldPassword, string newPassword);
+        DataSet GetLastOpenImage(int userId);
+        void SetLastOpenImage(int userId, string imageId, string imageInfo);
+<<<<<<< HEAD
+        int SubmitSharedApplication(UserInfo userInfo, DataTable autoUrlValues, DateTime defaultStart, DateTime defaultEnd, string instanceId, string instanceInfo, string toEmailId, int expirationTime);
+        SharedAppInfo ValidateAndGetSharedAppDetail(string token);
+        Image GetImageDetail(int sifId);
+=======
+        int SubmitSharedApplication(UserInfo userInfo, DataTable autoUrlValues, DateTime defaultStart, DateTime defaultEnd, string instanceId, string instanceInfo, string toEmailId, int expirationTime,string ipAddress);
+        SharedAppInfo ValidateSharedAppToken(string token);
+>>>>>>> c75637344c95099d7934baad3ea2a5eb9ee91242
+    }
+}

@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+
+namespace TBA.BeastWebService.BAL.Utility
+{
+    public static class ConfigReader
+    {
+        private static string redisServer = string.Empty;
+        public static string RedisServer
+        {
+            get
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(redisServer))
+                        redisServer = ConfigurationManager.AppSettings["RedisServer"];
+
+                    return redisServer;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        private static string redisDataExpireInMinute = string.Empty;
+        public static string RedisDataExpireInMinute
+        {
+            get
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(redisDataExpireInMinute))
+                        redisDataExpireInMinute = ConfigurationManager.AppSettings["RedisDataExpireInMinute"];
+
+                    return redisDataExpireInMinute;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+<<<<<<< HEAD
+=======
+
+        private static string fromMailAddress = string.Empty;
+        public static string FromMailAddress
+        {
+            get
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(fromMailAddress))
+                        fromMailAddress = ConfigurationManager.AppSettings["FromMailAddress"];
+
+                    return fromMailAddress;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+>>>>>>> feature/AfterShareLoginMail
+    }
+}

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+  </configSections>
+  <connectionStrings>
+    <add name="SessionServerConnectionString" connectionString="Data Source=beastdev1;Initial Catalog=SessionServer;Integrated Security=false;User ID = rradmin; Password = rradmin;" providerName="System.Data.SqlClient" />
+    <add name="AppStoreConnectionString" connectionString="Data Source=beastdev1;Initial Catalog=Web_AppStore;Integrated Security=false;User ID = rradmin; Password = rradmin;" providerName="System.Data.SqlClient" />
+    <add name="TradeCaptureConnectionString" connectionString="Data Source=beastdev1;Initial Catalog=TradeCapture;Integrated Security=false;User ID = rradmin; Password = rradmin;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <appSettings>
+
+    <!--Shared Url-->
+    <add key="ExpirationTime" value="60" />
+    <add key="SharedAppUrl" value="http://localhost:4850/Home/SharedApp" />
+    <!--Shared Url Page Link-->
+    <!--Shared Url-->
+
+    <!--Log Utility settings-->
+    <add key="SessionVariablesXMLPath" value="~/LogSettings/" />
+    <add key="log4net.Internal.Debug" value="false" />
+    <add key="log4net.Config" value="Web.config" />
+    <add key="log4net.Config.Watch" value="True" />
+    <!--*********************-->
+
+    <add key="SMTPServer" value="beasttestnu4.vcmpartners.com" />
+    <add key="SystemRunningOn" value="test" />
+
+    <!--MaxMind Start :: These keys are assoicate with this account: amittal@thebeastapps.com :: -->
+    <add key="MaxMindUserId" value="93414" />
+    <add key="MaxMindLicenseKey" value="KtNKXnpmgP7i" />
+    <!--MaxMind End-->
+
+    <!--Redis server setting -->
+    <!--<add key="RedisServer" value="172.25.55.9:6379"/>-->
+    <add key="RedisServer" value="192.168.33.136:6379" />
+    <add key="RedisDataExpireInMinute" value="5555" />
+    <!--Redis server setting End-->
+    
+<<<<<<< HEAD
+    <add key="FromMailAddress" value="jshah@thebeastapps.com" />
+=======
+    <add key="FromMailAddress" value="ntrivedi@thebeastapps.com" />
+>>>>>>> develop
+    <add key="EnableEmail" value="True" />
+  
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1" />
+    <httpRuntime targetFramework="4.5.1" />
+  </system.web>
+  <log4net>
+    <!-- Define some output appenders -->
+    <!--Log4Net Start-->
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value="Log\logs" />
+      <appendToFile value="true" />
+      <maxSizeRollBackups value="10240" />
+      <maximumFileSize value="10240 KB" />
+      <rollingStyle value="Size" />
+      <staticLogFileName value="false" />
+      <datePattern value="'.'yyyyMMdd'.txt'" />
+      <param name="RollingStyle" value="Composite" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date %-5level %username %exception - %message%newline" />
+      </layout>
+    </appender>
+    <appender name="UdpAppender" type="log4net.Appender.UdpAppender">
+      <remoteAddress value="192.168.33.130" />
+      <remotePort value="5143" />
+      <layout type="log4net.Layout.PatternLayout, log4net">
+        <conversionPattern value="%date %-5level %username %exception - %message%newline" />
+      </layout>
+    </appender>
+    <!--Log4Net End-->
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="UdpAppender" />
+    </root>
+  </log4net>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.0.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31BF3856AD364E35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Autofac" publicKeyToken="17863af14b0044da" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.5.0.0" newVersion="3.5.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="log4net" publicKeyToken="669e0ddf0bb1aa2a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-1.2.15.0" newVersion="1.2.15.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.webServer>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*" />
+      </customHeaders>
+    </httpProtocol>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+  </system.webServer>
+
+  <system.net>
+    <defaultProxy enabled="true" useDefaultCredentials="true"></defaultProxy>
+  </system.net>
+
+</configuration>

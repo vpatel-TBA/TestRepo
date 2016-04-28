@@ -1,0 +1,13 @@
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\TBA.BeastWebService.Models.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\TBA.BeastWebService.Models.pdb
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Common.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Interfaces.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Redis.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Text.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\TBA.CacheService.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Common.xml
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Redis.xml
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\bin\Release\ServiceStack.Text.xml
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\obj\Release\TBA.BeastWebService.Models.csprojResolveAssemblyReference.cache
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\obj\Release\TBA.BeastWebService.Models.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Models\obj\Release\TBA.BeastWebService.Models.pdb

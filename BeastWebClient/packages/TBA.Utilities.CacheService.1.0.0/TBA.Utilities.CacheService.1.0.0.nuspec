@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>TBA.Utilities.CacheService</id>
+    <version>1.0.0</version>
+    <title>TBA.Utilities.CacheService</title>
+    <authors>TheBeastApps</authors>
+    <owners>TheBeastApps</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cache Service to save data in redis server.</description>
+    <summary>Use this packages to store any kind of serialized data on redis server.</summary>
+    <releaseNotes>Initial Release:
+-Redis Service Implemented.</releaseNotes>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="ServiceStack.Redis" version="4.0.48" />
+    </dependencies>
+  </metadata>
+</package>

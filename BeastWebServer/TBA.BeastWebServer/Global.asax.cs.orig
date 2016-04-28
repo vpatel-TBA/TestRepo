@@ -1,0 +1,79 @@
+﻿using Autofac;
+using Autofac.Integration.SignalR;
+using BeastClientPlugIn;
+using Microsoft.AspNet.SignalR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Web;
+using System.Web.Security;
+using System.Web.SessionState;
+using TBA.BeastWebServer.AppModels;
+using TBA.BeastWebServer.CacheManagers;
+using TBA.BeastWebServer.ConnectionServices;
+using TBA.BeastWebServer.Implementations;
+using TBA.BeastWebServer.Interfaces;
+using TBA.BeastWebServer.Parameters;
+using TBA.BeastWebServer.Utilities;
+using TBA.CacheService.Implementations;
+using TBA.CacheService.Interfaces;
+
+namespace TBA.BeastWebServer
+{
+    public class Global : System.Web.HttpApplication
+    {
+        protected void Application_Start(object sender, EventArgs e)
+        {
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.RegisterHubs(Assembly.GetExecutingAssembly());
+
+            containerBuilder.RegisterType<BeastConnectionManager>().As<IBeastConnectionManager>().SingleInstance(); 
+            containerBuilder.RegisterType<ApplicationManager>().As<IApplicationManager>().SingleInstance();
+            containerBuilder.RegisterType<ApplicationFactory>().As<IApplicationFactory>().SingleInstance();
+            containerBuilder.RegisterType<Application>().As<IApplication>();
+            containerBuilder.RegisterType<SignalRResponseAdapter>().As<ISignalRResponseAdapter>().SingleInstance();
+            //containerBuilder.RegisterGeneric(typeof(RedisService<>)).As(typeof(ICacheService<>));
+            //containerBuilder.RegisterGeneric(typeof(CacheAdaptor<>)).As(typeof(ICacheAdaptor<>));
+            containerBuilder.RegisterType<ServerAgentClass>().As<ServerAgent>().SingleInstance();
+            containerBuilder.RegisterType<AppParameters>().As<IAppParameters>();
+<<<<<<< HEAD
+            containerBuilder.RegisterType<ResponseParameters>().As<IResponseParameters>();
+            containerProvider = new ContainerProvider(containerBuilder.Build());
+=======
+
+            GlobalHost.DependencyResolver = new AutofacDependencyResolver(containerBuilder.Build());
+>>>>>>> develop
+        }
+
+        protected void Session_Start(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_End(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

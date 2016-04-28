@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Server</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="BeastWebServerClassDiagram.cd">
+      <publishTime>03/31/2016 12:56:26</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>12/15/2015 12:26:50</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.SignalR.dll">
+      <publishTime>12/08/2015 12:01:18</publishTime>
+    </File>
+    <File Include="bin/Interop.BeastClientPlugIn.dll">
+      <publishTime>04/01/2016 13:58:57</publishTime>
+    </File>
+    <File Include="bin/Interop.Scripting.dll">
+      <publishTime>04/01/2016 13:58:56</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>04/04/2016 13:35:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>12/15/2015 13:01:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>01/06/2016 12:36:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>12/15/2015 12:37:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>12/15/2015 13:06:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>12/15/2015 12:37:20</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/23/2016 11:43:00</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>12/15/2015 12:36:08</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Common.dll">
+      <publishTime>03/23/2016 11:43:01</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Interfaces.dll">
+      <publishTime>03/23/2016 11:43:00</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Redis.dll">
+      <publishTime>03/23/2016 11:43:01</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Text.dll">
+      <publishTime>03/23/2016 11:43:00</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastInterface.dll">
+      <publishTime>03/02/2016 14:03:33</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastModels.dll">
+      <publishTime>04/02/2016 15:10:05</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastWebServer.dll">
+      <publishTime>04/05/2016 18:23:31</publishTime>
+    </File>
+    <File Include="bin/TBA.CacheService.dll">
+      <publishTime>03/02/2016 14:03:57</publishTime>
+    </File>
+    <File Include="bin/TBA.Utilities.LogUtility.dll">
+      <publishTime>04/04/2016 13:35:36</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/05/2016 10:56:19</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>04/04/2016 18:51:06</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/04/2016 18:51:07</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/05/2016 18:23:32</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

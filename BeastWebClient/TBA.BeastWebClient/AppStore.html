@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AppStore</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="Content/images/site/favicon.ico" rel="shortcut icon" type="text/css" />
+    <link href="Scripts/ExternalLibraries/jqueryui/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/datepicker.css" rel="stylesheet" type="text/css" />
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="Content/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="Content/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="Content/css/animations.css" rel="stylesheet" type="text/css">
+    <link href="Content/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="Content/css/style.css" rel="stylesheet" type="text/css">
+    <link href="Content/css/bubble.css" rel="stylesheet" type="text/css">
+
+    <script src="Scripts/Shared/Config.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.min.js" type="text/javascript"></script>
+    <script src="Scripts/ExternalLibraries/bootstrap/bootstrap-datepicker.js"></script>
+
+    <script id="hubUrl"></script>
+    <script>
+        var hubUrl = config.signalrPath;
+        $('#hubUrl').attr("src", hubUrl + '/hubs');
+    </script>
+</head>
+<body>
+    <div id="container" class="cf">
+        <header class="innerHeader">
+            <div class="navbarApplication navbar-default navbar-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div id="sitelogo" class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="Content/images/logo.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a>HOME</a></li>
+                            <li><a>Company</a></li>
+                            <li><a>Products &amp; Services</a></li>
+                            <li><a>Tech/Dev Zone</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid subMenuWrapper">
+            <div class="row cf">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    <div class="row cf">
+                        <div class="calculatorMenuHldr">
+                            <a>Calculator Menu </a>
+                            <div class="calcMenuLinkHldr">
+                                <div class="panel-group mainMenuHldr" id="side-menu">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-4 text-center">
+                    <div class="connectionHldr">
+                        Connection : <i class="fa fa-circle disConnect" id="ServerConnectionStatus"></i>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-6">
+                    <div class="row cf">
+                        <div class="btnLinkGroup">
+                            <ul>
+                                <li class="renderMode" mode="2"><a href="">Same Page</a></li>
+                                <li class="renderMode" mode="1"><a href="">New Tab</a></li>
+                                <li class="renderMode active" mode="0"><a href="">Replace Last</a></li>
+                                <li class="userInfoHldr">
+                                    <a id="userDropdownMenu">
+                                        <span id="userName">
+
+                                        </span>
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                    <div id="userInfo" style="display:none">
+                                        <ul>
+                                            <li><a>User Profile</a></li>
+                                            <li><a id="changePassword">Change Password</a></li>
+                                            <li>
+                                                <!--<a href=" <%$ AppSettings:logout %>">Logout</a>-->
+                                                <!--<a href="<%=ConfigurationSettings.AppSettings['logout']%>">Logout</a>-->
+                                                <a id="logout" class="logout">Logout</a>
+
+                                                <!--@Html.ActionLink("Logout", "Logout", "Home", new { id = "logout" })-->
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <section class="commonWrapper">
+            <div class="container-fluid">
+                <div class="row calculatorWrapper cf">
+                    <div class="col-xs-12 col-sm-12 col-md-12 ">
+                        <div class="mainContainer examplePage">
+                            <div class="appDiv">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer Secation Start -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <ul class="footerLink">
+                            <li><a>Career</a></li>
+                            <li><a>Privacy</a></li>
+                            <li><a>Terms of Use</a></li>
+                            <li><a>Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4"><div class="copyright">&copy; 2005-2016. All Rights Reserved.</div></div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 animatedParent">
+                        <ul class="social cf">
+                            <li class="animated fadeIn"><a><i class="fa fa-facebook"></i></a></li>
+                            <li class="animated fadeIn slow"><a><i class="fa fa-google-plus"></i></a></li>
+                            <li class="animated fadeIn slower"><a><i class="fa fa-twitter"></i></a></li>
+                            <li class="animated fadeIn"><a><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer Secation End -->
+        <a class="backTop"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <div id="exceptionModal" class="modal fade" tabindex="-1" role="dialog" style="height: 28%;width:35%;">
+        <div class=" modal-header">
+            <strong>The Beast Apps</strong>
+        </div>
+        <div class="modal-body">
+            <div id="exceptionMessage"></div>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary logout">Ok</a>
+        </div>
+    </div>
+
+    <div id="reconnectModal" class="modal fade" tabindex="-1" role="dialog" style="height: 30%;">
+        <div class=" modal-header">
+            <h3 id="myModalLabel">The Beast Apps</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+                Application got disconnected with server. Please reconnect.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button id="btnReconnect" onclick="document.location.reload(true)" class="btn btn-primary">
+                Reconnect
+            </button>
+        </div>
+    </div>
+
+    <div id="SharedApp" style="width: 30%; background: none; border: none; box-shadow: none;" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="sharedapphdr" style="cursor: move;">
+                <strong>You have shared The Beast App with your following contact:</strong>
+            </div>
+            <div class="modal-body">
+                <div id="shareddata">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnAppShared" class="btn btn-primary">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="busyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <h3 id="H3">The Beast Apps</h3>
+        </div>
+        <div style="text-align: center" class="modal-body">
+            <img src="Content/images/ajax-loader.gif" alt="Loading." />
+        </div>
+        <div class="modal-footer">
+            <p>
+                Application Loading...
+            </p>
+        </div>
+    </div>
+
+    <div id="msgModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <h3 id="H1">The Beast Apps</h3>
+        </div>
+        <div class="modal-body">
+            <div id="divMsg">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a id="btnCloseMsgModal" data-dismiss="modal" class="close">Close</a>
+        </div>
+    </div>
+
+    <div id="shareAppModal" class="modal fade"
+         tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <h3 id="H2">The Beast Apps</h3>
+        </div>
+        <div class="modal-body">
+            <textarea rows="3" id="txtShareReceiptsList"></textarea>
+        </div>
+        <div class="modal-footer">
+            <a id="A1" data-dismiss="modal" class="btn btn-primary">Share App</a>
+        </div>
+    </div>
+
+
+    <div id="imageDataInfo" style="width: 30%; background: none; border: none; box-shadow: none;" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="imageDataapphdr" style="cursor: move;">
+                <strong>Image Status</strong>
+            </div>
+            <div class="modal-body">
+                <div id="imageDataInfoText">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-primary">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="auditDataInfo" style="width: 30%; background: none; border: none; box-shadow: none; " class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="auditDataapphdr" style="cursor: move;">
+                <strong>Audit Data</strong>
+            </div>
+            <div class="modal-body">
+                <div id="auditDataInfoText" style="max-height: 112px; overflow-y: scroll; ">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-primary">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tblBasis" border="1" style="width: 390px;display:none" class="modal" tabindex="-1" role="dialog">
+        <input id="txtBeastValue_BasisWidget" type="hidden" />
+        <input id="txtLastClickedEleInfo_Basis" type="hidden" />
+        <div id="childDivBasis">
+            <table>
+                <tr>
+                    <td class="WidgetHeader">
+                        &nbsp;Frequency&nbsp;
+                        <input id="txtFrequency" class="input-medium" type="text" readonly="readonly" value=""
+                               onclick="display_Term_BasisWidget(this);" />
+                        &nbsp;
+                    </td>
+                    <td rowspan="2" align="right">
+                        <input id="Button3" type="button" value="Close" class="btn" data-dismiss="modal"
+                               onclick="Close_BasisWidget();" />
+                        <input id="Button2" type="button" value="OK" class="btn btn-primary" data-dismiss="modal"
+                               onclick="Save_BasisWidget();" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="WidgetHeader">
+                        &nbsp;Day Count&nbsp;
+                        <select id="DayCountSelection" class="input-medium" onchange="DayCount_selection_value();">
+                            <option value="A60">A60 : Act360</option>
+                            <option value="A65">A65 : Act365</option>
+                            <option value="AJP">AJP : Act365Japan</option>
+                            <option value="AA">AA : ActAct</option>
+                            <option value="165">165 : Act365ISDA</option>
+                            <option value="BIS">BIS : 30360ISDA</option>
+                            <option value="BPS">BPS : 303060PSA</option>
+                            <option value="BSI">BSI : 30360SIA</option>
+                            <option value="B60">B60 : 30360E</option>
+                            <option value="B65">B65 : 30365E</option>
+                        </select>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table id="table_widget_Basis" style="width: 100%;"></table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="display: none;" id="divTermBasisWidget">
+            <div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <table style="font-family: Verdana; width: 100%; font-size: 14px;">
+                                <tr>
+                                    <td class="WidgetHeader" align="left">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    Value
+                                                </td>
+                                                <td>
+                                                    <input id="txtValue1_BasisWidget" type="text" class="input-small" type="text" readonly="readonly"
+                                                           value="" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input id="btnYearMth_Basis_Term_Widget" type="button" value="Year/Mth" class="btn"
+                                                           onclick="Bind_Basis_Term_Widget(3);" />
+                                                </td>
+                                                <td>
+                                                    <input id="btnMonths_Basis_Term_Widget" type="button" value="Months" class="btn"
+                                                           onclick="Bind_Basis_Term_Widget(4);" />
+                                                </td>
+                                                <td>
+                                                    <input id="btnWeeks_Basis_Term_Widget" type="button" value="Weeks" class="btn" onclick="Bind_Basis_Term_Widget(2);" />
+                                                </td>
+                                                <td>
+                                                    <input id="btnDays_Basis_Term_Widget" type="button" value="Days" class="btn" onclick="Bind_Basis_Term_Widget(0);" />
+                                                </td>
+                                                <td>
+                                                    <input id="btnBusDays_Basis_Term_Widget" type="button" value="Bus Days" class="btn"
+                                                           onclick="Bind_Basis_Term_Widget(1);" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table id="table_widget_Term_Basis" style="width: 100%;"></table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer" style="padding: 5px">
+                <input id="btnTermCancel" type="button" value="Close" class="btn" onclick="Close_Term_BasisWidget();" />
+                <input id="btnTermOK" type="button" class="btn btn-primary" value="OK" onclick="Save_Term_BasisWidget();" />
+            </div>
+        </div>
+    </div>
+
+    <div id="dvPriceWidgetMobile" border="1" class="modal " tabindex="-1" role="dialog">
+    </div>
+
+    <div id="dvTermWidgetMobile" border="1" class="modal " tabindex="-1" role="dialog">
+    </div>
+
+    <input type="hidden" id="hdnWgtElement" />
+
+    <script type="text/javascript">
+        var userInfo = JSON.parse(localStorage.getItem("ClientInfo"));
+    </script>
+    <script src="Scripts/Site/FormatScript.js" type="text/javascript"></script>
+    <script src="Scripts/Site/jquery.numeric.js" type="text/javascript"></script>
+    <script src="Scripts/ExternalLibraries/jqueryui/jquery-ui.js" type="text/javascript"></script>
+    <script src="Scripts/Site/css3-animate-it.js" type="text/javascript"></script>
+    <script src="Scripts/ExternalLibraries/D3js/d3.min.js" type="text/javascript"></script>
+    <script src="Scripts/ExternalLibraries/BubbleChart.js" type="text/javascript"></script>
+    <script src="Scripts/Site/f2.min.js" type="text/javascript"></script>
+    <script src="Scripts/ExternalLibraries/bootstrap/bootstrap.js" type="text/javascript"></script>
+
+    <script src="Scripts/Site/ShareCalculator.js" type="text/javascript"></script>
+    <script src="Scripts/Site/Widgets/PriceWidget/priceWidgetScriptMobile.js" type="text/javascript"></script>
+    <script src="Scripts/Site/Widgets/BasisWidget/basisWidgetScript.js" type="text/javascript"></script>
+    <script src="Scripts/Site/Widgets/TermWidget/termWidgetScriptMobile.js" type="text/javascript"></script>
+
+    <script src="Scripts/Site/VCMCommon.js" type="text/javascript"></script>
+
+    <script src="Scripts/Services/UpdateProcessorService.js" type="text/javascript"></script>
+    <script src="Scripts/Services/ApplicationManager.js" type="text/javascript"></script>
+    <script src="Scripts/Services/SignalrService.js" type="text/javascript"></script>
+    <script src="Scripts/Services/AuthenticationService.js" type="text/javascript"></script>
+
+    <script src="Scripts/PageScript/AppStorePageScript.js" type="text/javascript"></script>
+</body>
+</html>

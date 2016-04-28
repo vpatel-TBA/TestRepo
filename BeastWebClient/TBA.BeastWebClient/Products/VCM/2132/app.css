@@ -1,0 +1,51 @@
+.2132 
+{  margin: 0;
+padding: 5px; 
+ text-align: center; 
+  background-color: white; 
+  width: 300px;
+ }
+ .2132 tbody td { 
+ text-align: center !important; 
+  height: 25px !important;
+ vertical-align: middle;
+ } 
+ .2132 .last {
+ } 
+ .2132 .last-change {
+ font-size: 80%;
+ }
+ .2132.positive {
+ color: green;
+ }
+ .2132.negative {
+  color: red;
+ }
+ .2132 .input-append {
+ padding-bottom: 7px;
+ padding-top: 7px;
+  }
+ .2132 p.hi {
+ font-weight: bold;
+  font-size: 20px;
+  }
+ .2132 .MainHeader 
+  { 
+  background-color: #4E78A0;
+  } 
+ .2132 .header_fcolor {
+ color: white;
+ font-weight: bold;
+ text-align: left;
+ font-size: 11px;
+  }
+ .2132 input[type="text"]  
+    { 
+  font-size: 95%;
+ width: 80% !important; 
+ font-family: Calibri !important;
+ padding: 0px !important;
+ margin: 0px !important;
+ border: none !important;
+ text-align: center !important;
+  }

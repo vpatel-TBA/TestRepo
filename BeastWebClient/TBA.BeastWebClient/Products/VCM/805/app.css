@@ -1,0 +1,74 @@
+._805 
+{  margin: 0;
+padding: 5px; 
+ text-align: center; 
+  background-color: white; 
+  width: 300px;
+ }
+ ._805 tbody td { 
+ text-align: center !important; 
+  height: 25px !important;
+ vertical-align: middle;
+ } 
+ ._805 .last {
+ } 
+ ._805 .last-change {
+ font-size: 80%;
+ }
+ ._805.positive {
+ color: green;
+ }
+ ._805.negative {
+  color: red;
+ }
+ ._805 .input-append {
+ padding-bottom: 7px;
+ padding-top: 7px;
+  }
+ ._805 p.hi {
+ font-weight: bold;
+  font-size: 20px;
+  }
+ ._805 .MainHeader 
+  { 
+  background-color: #4E78A0;
+  } 
+ ._805 .header_fcolor {
+ color: white;
+ font-weight: bold;
+ text-align: left;
+ font-size: 11px;
+  }
+ ._805 input[type="text"]  
+    { 
+  font-size: 95%;
+ width: 80% !important; 
+ font-family: Calibri !important;
+ padding: 0px !important;
+ margin: 0px !important;
+ border: none !important;
+ text-align: center !important;
+  }
+
+.firstColumnWidth {width:20% !important;}
+.secondColumnWidth{width:12% !important;}
+.thirdColumnWidth {width:63% !important;}
+.fourthColumnWidth {width:5% !important;}
+
+input[id="805_703"] {text-align:center;}
+input[id="805_704"] {text-align:center;margin-top:90%;}
+input[id="805_707"] {text-align:center;height:30px !important;}
+
+._805 input[type="text"]{text-align:left !important;}
+
+input[id="805_301"], input[id="805_303"] {text-align:left !important;}
+
+input[id="805_701"], input[id="805_702"], input[id="805_708"] {text-align:center !important;}
+
+input[id="805_101"], input[id="805_102"], input[id="805_103"], input[id="805_104"], input[id="805_105"], input[id="805_106"],
+input[id="805_107"], input[id="805_108"], input[id="805_109"], input[id="805_110"], input[id="805_111"], input[id="805_112"],
+input[id="805_113"], input[id="805_201"], input[id="805_202"], input[id="805_203"], input[id="805_204"], input[id="805_205"],
+input[id="805_206"], input[id="805_207"], input[id="805_208"], input[id="805_209"], input[id="805_210"], input[id="805_211"],
+input[id="805_212"], input[id="805_213"] {text-align:left !important;height:30px !important;}
+
+textarea{width:100% !important;height:30px !important;background-color:white;}

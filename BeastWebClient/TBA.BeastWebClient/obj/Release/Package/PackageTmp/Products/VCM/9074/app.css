@@ -1,0 +1,30 @@
+/**
+ * All selectors must have .YOUR_APP_ID as a prefix. 
+ */
+ ._9074 table {
+	margin:0;
+}
+._9074 tbody td {
+	text-align: right;
+}
+._9074 .last {
+}
+._9074 .last-change {
+	font-size:80%;
+}
+._9074 .positive {
+	color: green;
+}
+._9074 .negative {
+	color: red;
+}
+
+._9074 .input-append {
+	padding-bottom:7px;
+	padding-top:7px;
+}
+
+._9074 p.hi {
+	font-weight: bold;
+	font-size: 20px;
+}

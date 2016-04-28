@@ -1,0 +1,193 @@
+﻿using Autofac;
+using BeastClientPlugIn;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using TBA.BeastQos.Models.Error;
+using TBA.BeastQos.Models.Info;
+using TBA.BeastQos.Models.Interface;
+using TBA.BeastWebServer.CacheManagers;
+using TBA.BeastWebServer.Interfaces;
+using TBA.CacheService.Interfaces;
+
+namespace TBA.BeastWebServer.Implementations
+{
+    public class ApplicationManager : IApplicationManager
+    {
+        private readonly Dictionary<string, IApplication> applications = null;
+        private readonly ServerAgent serverAgent = null;
+        private readonly IApplicationFactory applicationFactory = null;
+        private readonly ITBALogService logService = null;
+
+        public ApplicationManager(ServerAgent serverAgent, IApplicationFactory applicationFactory, ITBALogService logService)
+        {
+            this.applications = new Dictionary<string, IApplication>();
+            this.serverAgent = serverAgent;
+            this.applicationFactory = applicationFactory;
+            this.logService = logService;
+        }
+
+        private IApplication GetApplications(IAppParameters appParameters)
+        {
+            try
+            {
+                if (applications.ContainsKey(appParameters.AppKey))
+                {
+                    return applications[appParameters.AppKey];
+                }
+                else
+                {
+                    IApplication application = CreateApplication(appParameters);
+                    applications[appParameters.AppKey] = application;
+                    return application;
+                }
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("ApplicationManager", "GetApplications", OperationCode.GetApplicationFail, ApplicationType.BeastWebServer, DateTime.Now, 0, appParameters.UserId, "RemoveThis", appParameters.SignalRConnectionId, appParameters.AuthToken, appParameters.AppId, appParameters.AppName, appParameters.ClientType, "", exception);
+                throw;
+            }
+        }
+
+        public void OpenApplicationModel(IAppParameters appParameters)
+        {
+            try
+            {
+                if (applications.ContainsKey(appParameters.AppKey))
+                {
+                    applications[appParameters.AppKey].ReferenceCount++;
+                }
+                else
+                {
+                    IApplication application = CreateApplication(appParameters);
+                    applications[appParameters.AppKey] = application;
+                }
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("ApplicationManager", "OpenApplicationModel", OperationCode.OpenApplicationModelFail, ApplicationType.BeastWebServer, DateTime.Now, 0, appParameters.UserId, "RemoveThis", appParameters.SignalRConnectionId, appParameters.AuthToken, appParameters.AppId, appParameters.AppName, appParameters.ClientType, "", exception);
+                throw;
+            }
+        }
+
+        public bool CloseApplicationModel(ICloseAppParameters closeAppParameters)
+        {
+            try
+            {
+                string groupName = closeAppParameters.AppSifId + "_" + closeAppParameters.SignalRConnectionId;
+                if (applications.ContainsKey(groupName))
+                {
+                    if (applications[groupName].ReferenceCount > 0)
+                    {
+                        applications[groupName].ReferenceCount--;
+                        return false;
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrWhiteSpace(applications[groupName].AppParameters.AppInstanceId))
+                        {
+                            applications[groupName].UnLoadApplicationEvents();
+                            serverAgent.CloseDocument("instid:" + applications[groupName].AppParameters.AppInstanceId.Split(':')[1].Trim() + "", null);
+                            applications.Remove(groupName);
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+<<<<<<< HEAD
+                logService.MakeErrorLog("ApplicationManager", "CloseApplicationModel", OperationCode.GetUpdated, ApplicationType.BeastWebServer, DateTime.Now, ExceptionCode.CommanException, closeAppParameters.UserId, "", closeAppParameters.SignalRConnectionId, closeAppParameters.AuthToken, "", "", closeAppParameters.ClientType, "Sif Id :" + string.Join(",", closeAppParameters.AppSifId), exception);
+=======
+                logService.MakeErrorLog("ApplicationManager", "CloseApplicationModel", OperationCode.CloseApplicationModelFail, ApplicationType.BeastWebServer, DateTime.Now, 0, closeAppParameters.UserId, "RemoveThis", closeAppParameters.SignalRConnectionId, closeAppParameters.AuthToken, "", "", "", "", exception);
+>>>>>>> feature/Adding_Exception_and_Log
+                throw;
+            }
+
+            return false;
+        }
+
+        private IApplication CreateApplication(IAppParameters appParameters)
+        {
+            return applicationFactory.GetApplication(appParameters, serverAgent, RemoveApplication);
+        }
+
+        public void RemoveApplication(IAppParameters appParameters)
+        {
+            try
+            {
+                applications.Remove(appParameters.AppKey);
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("ApplicationManager", "RemoveApplication", OperationCode.RemoveApplicationFail, ApplicationType.BeastWebServer, DateTime.Now, 0, appParameters.UserId, "RemoveThis", appParameters.SignalRConnectionId, appParameters.AuthToken, appParameters.AppId, appParameters.AppName, appParameters.ClientType, "", exception);
+            }
+        }
+
+        public void UpdateValueInApplication(IAppParameters appParameters)
+        {
+            object value = null;
+            DOMDataDocument document = null;
+            
+            try
+            {
+                document = GetApplications(appParameters).ApplicationDoc;
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("ApplicationManager", "UpdateValueInApplication", OperationCode.ApplicationCreateFail, ApplicationType.BeastWebServer, DateTime.Now, 0, appParameters.UserId, "RemoveThis", appParameters.SignalRConnectionId, appParameters.AuthToken, appParameters.AppId, appParameters.AppName, appParameters.ClientType, "", exception);
+                throw new ApplicationException();
+            }
+
+            try
+            {
+                document.BeginGroupedUpdate();
+                DOMDataNode dataNode = document.RootNode.ChildNodes.OfType<DOMDataNode>().Where(eel => eel.NodeName.Equals(appParameters.ElementId)).FirstOrDefault();
+                if (appParameters.ElementValue == "clr")
+                {
+                    dataNode.DataState = DOMDataNodeValueState.DATANODEVALUESTATE_BLANK;
+                }
+                else
+                {
+                    ValidateNodeValue(ref value, dataNode, appParameters.ElementValue);
+                    dataNode.DataValue = value;
+                }
+                document.EndGroupedUpdate();
+            }
+            catch (Exception exception)
+            {
+                logService.MakeErrorLog("ApplicationManager", "UpdateValueInApplication", OperationCode.UpdateApplicationFail, ApplicationType.BeastWebServer, DateTime.Now, 0, appParameters.UserId, "RemoveThis", appParameters.SignalRConnectionId, appParameters.AuthToken, appParameters.AppId, appParameters.AppName, appParameters.ClientType, "", exception);
+                throw;
+            }
+        }
+
+        private void ValidateNodeValue(ref object value, DOMDataNode node, string elementValue)
+        {
+            if (null != node)
+            {
+                switch (node.DataType)
+                {
+                    case DOMDataNodeValueType.DATANODEVALUETYPE_INTEGER:
+                        int intVal;
+                        if (int.TryParse(elementValue, out intVal))
+                            value = int.Parse(elementValue);
+                        break;
+                    case DOMDataNodeValueType.DATANODEVALUETYPE_DOUBLE:
+                        decimal decVal;
+                        if (decimal.TryParse(elementValue, out decVal))
+                            value = double.Parse(elementValue);
+                        break;
+                    case DOMDataNodeValueType.DATANODEVALUETYPE_DATE:
+                        DateTime datVal;
+                        if (DateTime.TryParse(elementValue, out datVal))
+                            value = DateTime.Parse(elementValue);
+                        break;
+                    default:
+                        value = elementValue;
+                        break;
+                }
+            }
+        }
+    }
+}

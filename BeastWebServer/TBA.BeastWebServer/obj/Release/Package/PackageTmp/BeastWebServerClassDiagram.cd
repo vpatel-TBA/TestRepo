@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TBA.BeastWebServer.AppModels.Application">
+    <Position X="3.25" Y="27" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QIAACEAAGAAEQAEggCAAAACAAEAIAAAABAAQBhCBACE=</HashCode>
+      <FileName>AppModels\Application.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.CacheManagers.CacheAdaptor&lt;T&gt;">
+    <Position X="8" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAAAAEAAAAgBAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CacheManagers\CacheAdaptor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.ConnectionServices.AppsDataHub">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EEAAAAIACAAAAAEWgAAAAAAAAACAAAIAAAAAABAAACA=</HashCode>
+      <FileName>ConnectionServices\AppsDataHub.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TBA.BeastWebServer.ConnectionServices.BeastConnectionManager">
+    <Position X="0.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EBAAAAQAAAgCgAAQgAAAAABAAAAqAAAAAAAAAAAAAKA=</HashCode>
+      <FileName>ConnectionServices\BeastConnectionManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Entities.User.UserInfo">
+    <Position X="8" Y="10" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAQoAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\User\UserInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Entities.User.ImageDetail">
+    <Position X="8" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAAAAAAAACAAAAAAAhAACAARAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\User\UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TBA.BeastWebServer.Implementations.ApplicationFactory">
+    <Position X="0.5" Y="20.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementations\ApplicationFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Implementations.ApplicationManager">
+    <Position X="0.5" Y="15.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAQAAAAAQgAAAABAAAAAKAAAAAAEAABAAAAA=</HashCode>
+      <FileName>Implementations\ApplicationManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Parameters.AppParameters">
+    <Position X="0.5" Y="27" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACEABAAQAAABAAAAAAAAgIpABAABABAAAAAAAASAAAA=</HashCode>
+      <FileName>Parameters\AppParameters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Parameters.CloseAppParameters">
+    <Position X="5.75" Y="36.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAQSAAAAAAAAAAACAhAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parameters\CloseAppParameters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Parameters.ResponseParameters">
+    <Position X="3.25" Y="36.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAAAAAAAABAADABAABAAAAAAAAAAQAAAE=</HashCode>
+      <FileName>Parameters\ResponseParameters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Utilities.ConfigReader">
+    <Position X="10" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAAAAAAAEAAIABAADACgACQAAAAgAAQAAAAECA=</HashCode>
+      <FileName>Utilities\ConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TBA.BeastWebServer.Utilities.SignalRResponseAdapter">
+    <Position X="3.25" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAgBAQgCBAAAAQFAgAAAAEgAAAAAAABAAAAAAACAAAA=</HashCode>
+      <FileName>Utilities\SignalRResponseAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TBA.BeastWebServer.Utilities.Utility">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAA=</HashCode>
+      <FileName>Utilities\Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TBA.LogService.Implementation.LogService">
+    <Position X="6" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IApplication">
+    <Position X="3" Y="22.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAgACAAAAAAAEAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IApplication.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IApplicationEventHandlers">
+    <Position X="5.5" Y="22.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBhAAAAE=</HashCode>
+      <FileName>Interfaces\IApplicationEventHandlers.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IApplicationFactory">
+    <Position X="0.5" Y="19" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IApplicationFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IApplicationManager">
+    <Position X="0.5" Y="13.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAABAAAAACAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IApplicationManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IAppParameters">
+    <Position X="0.5" Y="22.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACEABAAQAAABAAAAAAAAgIpABAABABAAAAAAAASAAAA=</HashCode>
+      <FileName>Interfaces\IAppParameters.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IBeastConnectionManager">
+    <Position X="0.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBeastConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.ICacheAdaptor&lt;T&gt;">
+    <Position X="8" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEAAAAABAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICacheAdaptor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.ICloseAppParameters">
+    <Position X="5.75" Y="33.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAQSAAAAAAAAAAAAAhAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICloseAppParameters.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.IResponseParameters">
+    <Position X="3.25" Y="33.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAAAAAAAABAADABAABAAAAAAAAAAQAAAE=</HashCode>
+      <FileName>Interfaces\IResponseParameters.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.BeastWebServer.Interfaces.ISignalRResponseAdapter">
+    <Position X="3.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAgBAQgCBAAAAQBAAAAAAEgAAAAAAABAAAAAAACAAAA=</HashCode>
+      <FileName>Interfaces\ISignalRResponseAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TBA.LogService.Interface.ILogService">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,51 @@
+.9998 
+{  margin: 0;
+padding: 5px; 
+ text-align: center; 
+  background-color: white; 
+  width: 300px;
+ }
+ .9998 tbody td { 
+ text-align: center !important; 
+  height: 25px !important;
+ vertical-align: middle;
+ } 
+ .9998 .last {
+ } 
+ .9998 .last-change {
+ font-size: 80%;
+ }
+ .9998.positive {
+ color: green;
+ }
+ .9998.negative {
+  color: red;
+ }
+ .9998 .input-append {
+ padding-bottom: 7px;
+ padding-top: 7px;
+  }
+ .9998 p.hi {
+ font-weight: bold;
+  font-size: 20px;
+  }
+ .9998 .MainHeader 
+  { 
+  background-color: #4E78A0;
+  } 
+ .9998 .header_fcolor {
+ color: white;
+ font-weight: bold;
+ text-align: left;
+ font-size: 11px;
+  }
+ .9998 input[type="text"]  
+    { 
+  font-size: 95%;
+ width: 80% !important; 
+ font-family: Calibri !important;
+ padding: 0px !important;
+ margin: 0px !important;
+ border: none !important;
+ text-align: center !important;
+  }

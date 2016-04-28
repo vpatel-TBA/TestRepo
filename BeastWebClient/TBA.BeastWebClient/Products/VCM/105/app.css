@@ -1,0 +1,51 @@
+/**
+ * All selectors must have .YOUR_APP_ID as a prefix. 
+ */
+._105 table
+{
+    margin: 0;
+}
+._105 tbody td
+{
+    text-align: right;
+}
+._105 .last
+{
+}
+._105 .last-change
+{
+    font-size: 80%;
+}
+._105 .positive
+{
+    color: green;
+}
+._105 .negative
+{
+    color: red;
+}
+
+._105 .input-append
+{
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+._105 p.hi
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*#105 select
+{
+    width: 6em;
+    text-align: left;
+    font-size:95%;
+}
+
+#105 input[type="text"]
+{
+   font-size:95%;
+    width: 4.5em;
+}*/

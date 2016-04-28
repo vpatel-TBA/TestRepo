@@ -1,0 +1,788 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using TBA.BeastModels.Application;
+using TBA.BeastModels.User;
+using TBA.BeastWebService.Interfaces.DAL;
+using TBA.Utilities.LogUtility;
+using TBA.Utilities.LogUtility.Info;
+
+namespace TBA.BeastWebService.DAL
+{
+    public class UserDBHandler : IUserDBHandler
+    {
+        private static string sessionServerConnectionString = null;
+        private static string appStoreConnectionString = null;
+        private readonly ILogService logService = null;
+
+        public UserDBHandler(ILogService logService)
+        {
+            this.logService = logService;
+        }
+
+        static UserDBHandler()
+        {
+            sessionServerConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SessionServerConnectionString"].ToString();
+            appStoreConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["AppStoreConnectionString"].ToString();
+        }
+
+        public ClientInfo ValidateUser(string userName, string password)
+        {
+            logService.Debug("UserDBHandler", "ValidateUser", OperationCode.NA, DateTime.Now, 0, "", "", 0, "", "", "", "UserName:" + userName, "");
+
+            ClientInfo clientInfo = null;
+            SqlConnection sqlConnection = null;
+
+            try
+            {
+                using (sqlConnection = new SqlConnection(sessionServerConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_User_Validate"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_LoginId", userName);
+                        sqlCommand.Parameters.AddWithValue("@p_Password", password);
+
+                        sqlConnection.Open();
+                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                        if (sqlDataReader.HasRows)
+                        {
+                            clientInfo = new ClientInfo();
+                            while (sqlDataReader.Read())
+                            {
+<<<<<<< .merge_file_a05588
+                                clientInfo.IsSuccess = true;
+                                clientInfo.MessageId = 1;
+                                clientInfo.CustomerId = Convert.ToInt32(sqlDataReader["CustomerId"]);
+                                clientInfo.FirstName = Convert.ToString(sqlDataReader["FirstName"]);
+                                clientInfo.LastName = Convert.ToString(sqlDataReader["LastName"]);
+                            }
+                            else
+                            {
+                                clientInfo.IsSuccess = false;
+                                clientInfo.MessageId = Convert.ToInt32(sqlDataReader["MsgId"]);
+                            }
+                            clientInfo.UserId = Convert.ToInt32(sqlDataReader["UserId"]);
+                            clientInfo.EmailId = Convert.ToString(sqlDataReader["EmailId"]);
+=======
+                                if (Convert.ToInt32(sqlDataReader["MsgId"]) == 1)
+                                {
+                                    clientInfo.IsSuccess = true;
+                                    clientInfo.MessageId = 1;
+                                    clientInfo.CustomerId = Convert.ToInt32(sqlDataReader["CustomerId"]);
+                                }
+                                else
+                                {
+                                    clientInfo.IsSuccess = false;
+                                    clientInfo.MessageId = Convert.ToInt32(sqlDataReader["MsgId"]);
+                                }
+                                clientInfo.UserId = Convert.ToInt32(sqlDataReader["UserId"]);
+                                clientInfo.EmailId = Convert.ToString(sqlDataReader["EmailId"]);
+                                clientInfo.FirstName = Convert.ToString(sqlDataReader["FirstName"]);
+                                clientInfo.LastName = Convert.ToString(sqlDataReader["LastName"]);
+                            }
+>>>>>>> .merge_file_a06444
+                        }
+
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return clientInfo;
+        }
+
+        public IEnumerable<Category> GetCategories(int userId)
+        {
+            logService.Debug("UserDBHandler", "GetCategories", OperationCode.NA, DateTime.Now, userId, "", "", 0, "", "", "", "", "");
+
+            List<Category> categories = null;
+            SqlConnection sqlConnection = null;
+            Category category = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_Get_AppStore_ImageCategory"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_UserId", userId);
+
+                        sqlConnection.Open();
+                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                        if (sqlDataReader.HasRows)
+                        {
+                            categories = new List<Category>();
+                            while (sqlDataReader.Read())
+                            {
+                                category = new Category();
+                                category.Id = Convert.ToInt32(sqlDataReader["CategoryId"]);
+                                category.Name = Convert.ToString(sqlDataReader["CategoryName"]);
+                                categories.Add(category);
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return categories;
+        }
+
+        public IEnumerable<Image> GetImageList(int userId)
+        {
+            logService.Debug("UserDBHandler", "GetImageList", OperationCode.NA, DateTime.Now, userId, "", "", 0, "", "", "", "", "");
+
+            List<Image> images = null;
+            SqlConnection sqlConnection = null;
+            Image image = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Get_AppStore_AppList_ByCategory"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_UserId", userId);
+
+                        sqlConnection.Open();
+                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                        if (sqlDataReader.HasRows)
+                        {
+                            images = new List<Image>();
+                            while (sqlDataReader.Read())
+                            {
+                                image = new Image();
+                                image.Id = Convert.ToInt32(sqlDataReader["BeastImageSID"]);
+                                image.Name = Convert.ToString(sqlDataReader["AppTitle"]);
+                                image.CategoryId = Convert.ToInt32(sqlDataReader["CategoryId"]);
+                                image.Type = Convert.ToInt16(sqlDataReader["IsGridImage"]);
+                                images.Add(image);
+                            }
+                        }
+
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return images;
+        }
+
+        public int ChangeUserPassword(string userEmail, string oldPassword, string newPassword)
+        {
+            logService.Debug("UserDBHandler", "ChangeUserPassword", OperationCode.NA, DateTime.Now, 0, "", "", 0, "", "", "", "UserEmail:" + userEmail);
+
+            SqlConnection sqlConnection = null;
+            int changedPassword = 0;
+            try
+            {
+                using (sqlConnection = new SqlConnection(sessionServerConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_Submit_NewAppStore_User_Pwd_Changes"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@P_Email", userEmail);
+                        sqlCommand.Parameters.AddWithValue("@P_Passowrd", oldPassword);
+                        sqlCommand.Parameters.AddWithValue("@P_NewPassowrd", newPassword);
+
+                        sqlConnection.Open();
+                        SqlParameter returnCode = sqlCommand.Parameters.Add("@P_return", SqlDbType.Int);
+                        returnCode.Direction = ParameterDirection.ReturnValue;
+                        sqlCommand.ExecuteNonQuery();
+                        changedPassword = Convert.ToInt32(returnCode.Value);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return changedPassword;
+        }
+
+        public int ForgotUserPassword(string userEmail, string oldPassword, string newPassword)
+        {
+            logService.Debug("UserDBHandler", "ForgotUserPassword", OperationCode.NA, DateTime.Now, 0, "", "", 0, "", "", "", "", "UserEmail:" + userEmail);
+
+            SqlConnection sqlConnection = null;
+            int changedPassword = 0;
+            try
+            {
+                using (sqlConnection = new SqlConnection(sessionServerConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_Submit_NewAppStore_User_Pwd_Changes"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@P_Email", userEmail);
+                        sqlCommand.Parameters.AddWithValue("@P_Passowrd", oldPassword);
+                        sqlCommand.Parameters.AddWithValue("@P_NewPassowrd", newPassword);
+
+                        sqlConnection.Open();
+                        SqlParameter returnCode = sqlCommand.Parameters.Add("@P_return", SqlDbType.Int);
+                        returnCode.Direction = ParameterDirection.ReturnValue;
+                        sqlCommand.ExecuteNonQuery();
+                        changedPassword = Convert.ToInt32(returnCode.Value);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return changedPassword;
+        }
+
+        public Image GetLastOpenImage(int userId)
+        {
+            logService.Debug("UserDBHandler", "GetLastOpenImage", OperationCode.NA, DateTime.Now, userId, "", "", 0, "", "", "", "", "");
+
+            Image image = null;
+            SqlConnection sqlConnection = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Get_Appstore_User_LastInstance_New"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_UserId", userId);
+
+                        sqlConnection.Open();
+                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                        if (sqlDataReader.HasRows)
+                        {
+                            image = new Image();
+                            while (sqlDataReader.Read())
+                            {
+                                image.Id = Convert.ToInt32(sqlDataReader["ImageId"]);
+                                image.Name = Convert.ToString(sqlDataReader["ImageName"]);
+                                image.CategoryId = Convert.ToInt32(sqlDataReader["CategoryId"]);
+                                image.Type = Convert.ToInt16(sqlDataReader["IsGridImage"]);
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return image;
+        }
+
+        public void SetLastOpenImage(int userId, int imageId, string imageInfo)
+        {
+            logService.Debug("UserDBHandler", "SetLastOpenImage", OperationCode.NA, DateTime.Now, userId, "", "", 0, "", "", "", "UserId:" + userId + " ImageId:" + imageId + " ImageInfo:" + imageInfo);
+
+            SqlConnection sqlConnection = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Submit_Appstore_User_LastInstance"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_UserId", userId);
+                        sqlCommand.Parameters.AddWithValue("@p_InstanceId", imageId);
+                        sqlCommand.Parameters.AddWithValue("@p_InstanceInfo", imageInfo);
+
+                        sqlConnection.Open();
+                        sqlCommand.ExecuteNonQuery();
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+        }
+
+        public int SubmitSharedApplication(UserInfo userInfo, DataTable autoUrlValues, DateTime startDate, DateTime endDate, string instanceId, int sifId, string sharedSignalRId, string[] recieverEmails, int expirationTime, string ipAddress)
+        {
+            logService.Debug("UserDBHandler", "SubmitSharedApplication", OperationCode.NA, DateTime.Now, userInfo.UserID, sharedSignalRId, "", sifId, "", "", "", "InstanceId:" + instanceId + " RecieverEmails:" + recieverEmails);
+
+            SqlConnection sqlConnection = null;
+            int returnResult = 0;
+            string moveToPage = "SharedApp";
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Submit_AppStore_AutoURL"))
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.AddWithValue("@p_AutoURL", autoUrlValues);
+                        sqlCommand.Parameters.AddWithValue("@p_UserId", userInfo.UserID);
+                        sqlCommand.Parameters.AddWithValue("@p_StartDate", startDate);
+                        sqlCommand.Parameters.AddWithValue("@p_EndDate", endDate);
+                        sqlCommand.Parameters.AddWithValue("@p_MovetoPage", moveToPage);
+                        sqlCommand.Parameters.AddWithValue("@p_SuccessFlag", 0);
+                        sqlCommand.Parameters.AddWithValue("@p_IpAddress", ipAddress);
+                        sqlCommand.Parameters.AddWithValue("@p_MinuteInterval", expirationTime);
+                        sqlCommand.Parameters.AddWithValue("@p_InstanceId", instanceId);
+                        sqlCommand.Parameters.AddWithValue("@P_SifId", sifId);
+                        sqlCommand.Parameters.AddWithValue("@P_SharedSignalRId", sharedSignalRId);
+
+                        sqlConnection.Open();
+                        returnResult = sqlCommand.ExecuteNonQuery();
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return returnResult;
+        }
+
+        public SharedAppInfo ValidateAndGetSharedAppDetail(string token)
+        {
+            logService.Debug("UserDBHandler", "ValidateAndGetSharedAppDetail", OperationCode.NA, DateTime.Now, 0, "", token, 0, "", "", "", "");
+
+            SqlConnection sqlConnection = null;
+            SharedAppInfo sharedAppInfo = null;
+
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Get_AppStore_AutoURL_Validate", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.Add("@p_AutoURLId", SqlDbType.VarChar);
+                        sqlCommand.Parameters["@p_AutoURLId"].Value = token;
+
+                        sqlConnection.Open();
+
+                        SqlDataReader autoUrlInfo = sqlCommand.ExecuteReader();
+
+                        if (autoUrlInfo.HasRows)
+                        {
+                            sharedAppInfo = new SharedAppInfo();
+                            while (autoUrlInfo.Read())
+                            {
+                                sharedAppInfo.ExtendedStatus = Convert.ToInt32(autoUrlInfo["successflag"]);
+                                sharedAppInfo.ExtendedOperationMessage = Convert.ToString(autoUrlInfo["successflagMsg"]);
+
+                                if (autoUrlInfo.NextResult())
+                                {
+                                    while (autoUrlInfo.Read())
+                                    {
+                                        sharedAppInfo.AutoURLId = Convert.ToString(autoUrlInfo["AutoURLId"]);
+                                        sharedAppInfo.AutoURL = Convert.ToString(autoUrlInfo["AutoURL"]);
+                                        sharedAppInfo.InitiatorUserId = Convert.ToString(autoUrlInfo["InitiatorUserId"]);
+                                        sharedAppInfo.EmailId = Convert.ToString(autoUrlInfo["EmailId"]);
+                                        sharedAppInfo.MovetoPage = Convert.ToString(autoUrlInfo["MovetoPage"]);
+                                        sharedAppInfo.InstanceId = Convert.ToString(autoUrlInfo["InstanceId"]);
+                                        sharedAppInfo.SifId = Convert.ToInt32(autoUrlInfo["SifId"]);
+                                        sharedAppInfo.SharedSignalRId = Convert.ToString(autoUrlInfo["SharedSignalRId"]);
+                                        sharedAppInfo.IsValid = Convert.ToBoolean(autoUrlInfo["IsValidFlag"]);
+                                        sharedAppInfo.AutoURLUserId = Convert.ToInt32(autoUrlInfo["AutoURLUserId"]);
+                                        sharedAppInfo.MessageId = Convert.ToInt32(autoUrlInfo["MsgId"]);
+                                        sharedAppInfo.Message = Convert.ToString(autoUrlInfo["Msg"]);
+                                        sharedAppInfo.InitiatorEmailId = Convert.ToString(autoUrlInfo["InitiatorEmailId"]);
+                                        sharedAppInfo.InitiatorName = Convert.ToString(autoUrlInfo["InitiatorName"]);
+                                        sharedAppInfo.StartDate = Convert.ToDateTime(autoUrlInfo["StartDate"]);
+                                        sharedAppInfo.EndDate = Convert.ToDateTime(autoUrlInfo["EndDate"]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return sharedAppInfo;
+        }
+
+        public void SaveAutoUrlAccessInfo(string autourltype, string productType, string product, string autourl, string SenderIP, long SenderId, string SenderName, DateTime? TimeOfSend,
+         string Receiverip, string ReceiverEmail, DateTime TimeOfAccess, string ISprovider, string Locationcity, string LocationCountry, string autourlvalidity,
+              int Record_create_by)
+        {
+            SqlConnection sqlConnection = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_submit_AutoURL_History", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_autourltype", autourltype));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_Producttype", product));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ProductName", product));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_autourl", autourl));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_SenderIP ", SenderIP));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_SenderId", SenderId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_SenderName", SenderName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_TimeOfSend", TimeOfSend));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_Receiverip", Receiverip));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ReceiverEmail", ReceiverEmail));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_TimeOfAccess", TimeOfAccess));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ISprovider", ISprovider));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_Locationcity", Locationcity));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LocationCountry", LocationCountry));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_autourlvalidity", autourlvalidity));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_Record_create_by", Record_create_by));
+
+                        sqlConnection.Open();
+                        sqlCommand.ExecuteNonQuery();
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+        }
+
+        public int ExtendExpiryOfSharedApp(string token, int MintInterval, int type, int isAdmin)
+        {
+            SqlConnection sqlConnection = null;
+            int rowsAffected = 0;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_Submit_VCM_AutoURL_ExtendExpiry", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_AutoUrlID", token));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_MinuteInterval", MintInterval));
+                        sqlCommand.Parameters.Add(new SqlParameter("@P_Block", type));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_isAdmin", isAdmin));
+                        sqlConnection.Open();
+                        rowsAffected = sqlCommand.ExecuteNonQuery();
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return rowsAffected;
+        }
+
+        public LocationInfo GetIPDetailsFromDB(string ipAddress)
+        {
+            LocationInfo locationInfo = null;
+            SqlConnection sqlConnection = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Get_Goip_Location_Dtl", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add("@P_IPAddress", SqlDbType.VarChar).Value = ipAddress;
+
+                        sqlConnection.Open();
+
+                        SqlDataReader locationDetail = sqlCommand.ExecuteReader();
+                        if (locationDetail.HasRows)
+                        {
+                            locationInfo = new LocationInfo();
+                            while (locationDetail.Read())
+                            {
+                                locationInfo.Organization = Convert.ToString(locationDetail["Organization"]);
+                                locationInfo.ISP = Convert.ToString(locationDetail["ISP"]);
+                                locationInfo.City = Convert.ToString(locationDetail["City"]);
+                                locationInfo.Region = Convert.ToString(locationDetail["Region"]);
+                                locationInfo.RegionCode = Convert.ToString(locationDetail["RegionCode"]);
+                                locationInfo.Country = Convert.ToString(locationDetail["Country"]);
+                                locationInfo.CountryCode = Convert.ToString(locationDetail["CountryCode"]);
+                                locationInfo.Zipcode = Convert.ToString(locationDetail["Zipcode"]);
+                                locationInfo.Longitude = Convert.ToString(locationDetail["Logintude"]);
+                                locationInfo.Latitude = Convert.ToString(locationDetail["Latitude"]);
+                                locationInfo.TimeZone = Convert.ToString(locationDetail["TimeZone"]);
+                                locationInfo.HostName = Convert.ToString(locationDetail["HostName"]);
+                                locationInfo.IPAddress = Convert.ToString(locationDetail["IPAddress"]);
+                                locationInfo.StatusDate = Convert.ToDateTime(locationDetail["StatusDate"]);
+                                locationInfo.StatusInfo = Convert.ToString(locationDetail["StatusInfo"]);
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+
+            return locationInfo;
+        }
+
+        public void SetIPDetailsInDB(LocationInfo locaionInfo)
+        {
+            SqlConnection sqlConnection = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Submit_Goip_Location_Dtl", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Organization))
+                        {
+                            sqlCommand.Parameters.Add("@P_Organization", SqlDbType.VarChar).Value = locaionInfo.Organization;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Organization", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.ISP))
+                        {
+                            sqlCommand.Parameters.Add("@P_ISP", SqlDbType.VarChar).Value = locaionInfo.ISP;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_ISP", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.City))
+                        {
+                            sqlCommand.Parameters.Add("@P_City", SqlDbType.VarChar).Value = locaionInfo.City;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_City", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Region))
+                        {
+                            sqlCommand.Parameters.Add("@P_Region", SqlDbType.VarChar).Value = locaionInfo.Region;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Region", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.RegionCode))
+                        {
+                            sqlCommand.Parameters.Add("@P_RegionCode", SqlDbType.VarChar).Value = locaionInfo.RegionCode;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_RegionCode", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Country))
+                        {
+                            sqlCommand.Parameters.Add("@P_Country", SqlDbType.VarChar).Value = locaionInfo.Country;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Country", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.CountryCode))
+                        {
+                            sqlCommand.Parameters.Add("@P_CountryCode", SqlDbType.VarChar).Value = locaionInfo.CountryCode;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_CountryCode", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Zipcode))
+                        {
+                            sqlCommand.Parameters.Add("@P_Zipcode", SqlDbType.VarChar).Value = locaionInfo.Zipcode;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Zipcode", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Longitude))
+                        {
+                            sqlCommand.Parameters.Add("@P_Logintude", SqlDbType.VarChar).Value = locaionInfo.Longitude;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Logintude", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.Latitude))
+                        {
+                            sqlCommand.Parameters.Add("@P_Latitude", SqlDbType.VarChar).Value = locaionInfo.Latitude;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_Latitude", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.TimeZone))
+                        {
+                            sqlCommand.Parameters.Add("@P_TimeZone", SqlDbType.VarChar).Value = locaionInfo.TimeZone;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_TimeZone", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.HostName))
+                        {
+                            sqlCommand.Parameters.Add("@P_HostName", SqlDbType.VarChar).Value = locaionInfo.HostName;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_HostName", SqlDbType.VarChar).Value = string.Empty;
+                        }
+                        if (string.IsNullOrWhiteSpace(locaionInfo.IPAddress))
+                        {
+                            sqlCommand.Parameters.Add("@P_IPAddress", SqlDbType.VarChar).Value = locaionInfo.IPAddress;
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.Add("@P_IPAddress", SqlDbType.VarChar).Value = string.Empty;
+                        }
+
+                        sqlCommand.Parameters.Add("@P_StatusDate", SqlDbType.SmallDateTime).Value = DateTime.Now.ToShortDateString();
+
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Image GetImageDetail(int sifId)
+        {
+            logService.Debug("UserDBHandler", "GetImageDetail", OperationCode.NA, DateTime.Now, 0, "", "", sifId, "", "", "", "");
+
+            SqlConnection sqlConnection = null;
+            Image image = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(appStoreConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("Proc_Web_AppStore_Get_Image_dtl", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@P_SIFID", sifId));
+                        sqlConnection.Open();
+                        using (SqlDataReader sqlReader = sqlCommand.ExecuteReader())
+                        {
+                            if (sqlReader.Read())
+                            {
+                                image = new Image();
+                                image.Name = Convert.ToString(sqlReader["AppTitle"]);
+                                image.Type = Convert.ToInt16(sqlReader["IsGridImage"]);
+                            }
+                        }
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                    sqlConnection.Close();
+            }
+            return image;
+        }
+
+    }
+}

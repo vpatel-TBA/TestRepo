@@ -1,0 +1,5 @@
+D:\GitHub\Architecture\ArchStuff\BeastWebClient\TBA.BeastWebClient\bin\TBA.BeastWebClient.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebClient\TBA.BeastWebClient\bin\TBA.BeastWebClient.pdb
+D:\GitHub\Architecture\ArchStuff\BeastWebClient\TBA.BeastWebClient\obj\Release\TBA.BeastWebClient.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebClient\TBA.BeastWebClient\obj\Release\TBA.BeastWebClient.pdb
+D:\GitHub\Architecture\ArchStuff\BeastWebClient\TBA.BeastWebClient\obj\Release\TBA.BeastWebClient.csprojResolveAssemblyReference.cache

@@ -1,0 +1,254 @@
+﻿function ApplicationManager() {
+
+    this.GetApplicationCategories = function (userId) {
+        $.ajax({
+            method: 'get',
+            cache: false,
+            beforeSend: function (request) {
+                request.setRequestHeader('Authorization', 'Basic ' + userInfo.Token);
+            },
+            data: { userId: userId },
+            url: config.webApiServerUrl + "/api/Service/GetCategories",
+            success: function (categoryList) {
+                if (typeof categoryList != 'undefined' && categoryList != null && categoryList != "") {
+                    var length = categoryList.length;
+                    var sideMenu = $("#side-menu");
+                    var categoryHtml = "";
+                    for (var i = 0; i < length; i++) {
+                        categoryHtml = categoryHtml +
+                            "<div class='panel panel-default'>" +
+                            "<div class='panel-heading'>" +
+                            "<h4 class='panel-title'>" +
+                            "<a class='accordion-toggle' data-toggle='collapse' data-parent='#side-menu' href=#category_" + categoryList[i].Id + "><i class='fa fa-angle-double-right'></i>" + categoryList[i].Name + "</a>" +
+                            "</h4>" +
+                            "</div>" +
+                            "<div id=category_" + categoryList[i].Id + " class='panel-collapse collapse'></div></div>";
+                    }
+                    sideMenu.html(categoryHtml);
+                    categoryHtml = null;
+                    length = null;
+                    GetAllApplicationsOfCategories(userId);
+                    
+                }
+            },
+            error: function (request, status, error) {
+                CS_Func_CreateExceptionPopup(JSON.parse(request.responseText).Message);
+            }
+        });
+
+    }
+
+    function GetAllApplicationsOfCategories(userId) {
+        $.ajax({
+            method: 'get',
+            cache: false,
+            beforeSend: function (request) {
+                request.setRequestHeader('Authorization', 'Basic ' + userInfo.Token);
+            },
+            data: { userId: userId },
+            url: config.webApiServerUrl + "/api/Service/GetImageList",
+            success: function (applicationList) {
+                if (typeof applicationList != 'undefined' && applicationList != null && applicationList != "") {
+                    var length = applicationList.length;
+                    for (var i = 0; i < length; i++) {
+                        var category = $("#category_" + applicationList[i].CategoryId);
+                        var applicationHtml = "<div class='panel-body subMenuHldr'><ul>";
+                        applicationHtml = applicationHtml + "<li><a class='openApplication' imageType='" + applicationList[i].Type + "' imageId='" + applicationList[i].Id + "' Id='application_" + applicationList[i].Id + "' imageName='" + applicationList[i].Name + "' categoryId=" + applicationList[i].CategoryId + ">" + applicationList[i].Name + "</a></li>";
+                        applicationHtml = applicationHtml + "</ul></div>";
+                        category.append(applicationHtml);
+                    }
+                    applicationHtml = null;
+                    length = null;
+                    //As its async call it will finishing even after loading last open image so again adding disable class for last open.
+                    $("#application_" + lastOpenCalc).addClass("disabled");
+                }
+            },
+            error: function (request, status, error) {
+                CS_Func_CreateExceptionPopup(JSON.parse(request.responseText).Message);
+            }
+        });
+    }
+
+    this.GetLastOpenApplication = function (userId) {
+        //Todo : Set default image here incase last open image not found.
+        var image = {
+            ImageId: 152,
+            ImageName: 'BYC',
+            ImageType: 0
+        };
+        $.ajax({
+            method: 'get',
+            cache: false,
+<<<<<<< HEAD
+            data: { userId: userId },
+=======
+            beforeSend: function (request) {
+                request.setRequestHeader('Authorization', 'Basic ' + userInfo.Token);
+            },
+            data: { userId: userInfo.UserId },
+>>>>>>> feature/TokenAuthenticationClient_Service
+            url: config.webApiServerUrl + "/api/Service/GetLastOpenImage",
+            success: function (responseImage) {
+                if (typeof responseImage != 'undefined' && responseImage != null && responseImage != "") {
+                    applicationManager.CreateApplication(responseImage.Id, responseImage.Name, responseImage.Type);
+                }
+            },
+            error: function (request, status, error) {
+                CS_Func_CreateExceptionPopup(JSON.parse(request.responseText).Message);
+                applicationManager.CreateApplication(image.ImageId, image.ImageName, image.ImageType);
+            }
+        });
+    }
+
+    this.SetLastOpenApplication = function (imageId) {
+        var imageInfo = userInfo.UserId + "#" + userInfo.CustomerId + "#0";
+        $.ajax({
+            method: 'get',
+            cache: false,
+            beforeSend: function (request) {
+                request.setRequestHeader('Authorization', 'Basic ' + userInfo.Token);
+            },
+            data: { userId: userInfo.UserId, imageId: imageId, imageInfo: imageInfo },
+            url: config.webApiServerUrl + "/api/Service/SetLastOpenImage",
+            success: function () {
+                console.log("Submited " + imageId + " as Last open Calc...");
+            },
+            error: function (request, status, error) {
+                CS_Func_CreateExceptionPopup(JSON.parse(request.responseText).Message);
+            }
+        });
+    }
+
+    this.GetApplicationDetailAndCreateIt = function (sifId) {
+        $.ajax({
+            method: 'get',
+            cache: false,
+            data: { sifId: sifId },
+            url: config.webApiServerUrl + "/api/Service/GetImageDetail",
+            success: function (imageDetail) {
+                applicationManager.CreateApplication(sifId, imageDetail.Name, imageDetail.Type);
+            },
+            error: function (request, status, error) {
+
+            }
+        });
+    }
+
+    this.CreateApplication = function (imageId, imageName, imageType) {
+        var ApplicationConfiguration = [{
+            appId: imageId,
+            description: imageName,
+            name: imageName,
+            manifestUrl: config.contextPath + 'Products/VCM/' + imageId + '/manifest.js',
+            context: {
+                //Todo : add any thing that used in appclass.js like old appstore mechanism.
+                appId: imageId,
+                appType: imageType,
+                appName: imageName
+            }
+        }];
+        lastOpenCalc = imageId;
+        //It will not add disable on first call as category is still not loaded.
+        $("#application_" + lastOpenCalc).addClass("disabled");
+        F2.registerApps(ApplicationConfiguration);
+    }
+
+    this.CloseApplication = function (imageId) {
+        $("#application_" + imageId).removeClass("disabled");
+        removeAppFromContainer(imageId);
+        removeAppDiv(imageId);
+
+        //Close app parameter class
+        var applicationDetails = {
+            AppSifId: imageId,
+            AppMode: 1,
+            SignalRConnectionId: "",
+            UserId: userInfo.UserId,
+            CustomerId: 0,
+            SpecialAppId: 1,
+            ClientType: "Web",
+            AuthToken: userInfo.Token,
+            SharedSignalRConnectionId: userInfo.SharedSignalrId,
+        };
+
+        if (typeof signalrService != 'undefined' && signalrService != null) {
+            signalrService.CloseApplication(applicationDetails);
+        }
+        else
+        {
+            isModalOpen = true;
+            $('#reconnectModal').modal({ keyboard: false, backdrop: 'static' });
+        }
+
+    }
+
+    function removeAppDiv(imageId) {
+        try {
+            if (typeof imageId != 'undefined' && imageId != null) {
+                $("div#mainProductSection div." + imageId).remove();
+
+                var tmpIndx = 1;
+
+                for (tmpIndx; tmpIndx <= getCurrentRowIndex() ; tmpIndx++) {
+
+                    if ($("#mainProductSection div#" + getRelativeRowName(tmpIndx) + " > div").length > 0) {
+
+                    }
+                    else {
+                        $("#mainProductSection div#" + getRelativeRowName(tmpIndx) + "").remove();
+                    }
+                }
+            }
+        }
+        catch (err) {
+            var strerrordesc = "Function:removeAppDiv(); Error is : " + err.description + "; Error number is " + err.number + "; Message :" + err.message;
+            onJavascriptLog("IcapCme.aspx", strerrordesc);
+        }
+    }
+
+    function removeAppFromContainer(imageId) {
+        F2.removeApp(imageId);
+    }
+
+    this.SendShareImageRequest = function (appId, emailIds, token, connectionId, instanceId) {
+        $.ajax({
+            type: "GET",
+            cache: false,
+            beforeSend: function (request) {
+                request.setRequestHeader('Authorization', 'Basic ' + userInfo.Token);
+            },
+            data: { appId: appId, recieverEmails: emailIds, token: token, sharedSignalRId: connectionId, instanceId: instanceId },
+            url: config.webApiServerUrl + "/api/Service/SubmitSharedApplication",
+            success: function (tokenArray) {
+                if (typeof tokenArray != 'undefined' && tokenArray != null){
+                    CS_Func_CreateAutoURlPopup(tokenArray);
+                }
+                else {
+                    alert("There is error in sending mail related to share application.");
+                }
+            },
+            error: function (request, status, error) {
+                CS_Func_CreateExceptionPopup(JSON.parse(request.responseText).Message);
+                //alert("There is error in sending mail related to share application.");
+            }
+        });
+    }
+
+    // Called when an exception is occured during Token Authentication
+    function CS_Func_CreateExceptionPopup(exceptionMessage) {
+        try {
+            $('#exceptionMessage').html(exceptionMessage);
+            $('#exceptionModal').modal({ keyboard: false, backdrop: 'static' });
+        }
+        catch (err) {
+            var strerrordesc = "Function:CreateExceptionPopup();  Message :" + err.message;
+            onJavascriptLog("ApplicationManager.js", strerrordesc);
+        }
+    }
+
+    $('#exceptionOk').click(function () {
+        signalrService.LogoutUser();
+    });
+
+}
+

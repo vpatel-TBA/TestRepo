@@ -1,0 +1,7 @@
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\bin\Release\TBA.BeastWebService.Interfaces.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\bin\Release\TBA.BeastWebService.Interfaces.pdb
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\obj\Release\TBA.BeastWebService.Interfaces.csprojResolveAssemblyReference.cache
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\obj\Release\TBA.BeastWebService.Interfaces.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\obj\Release\TBA.BeastWebService.Interfaces.pdb
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\bin\Release\TBA.BeastInterface.dll
+D:\GitHub\Architecture\ArchStuff\BeastWebService\TBA.BeastWebService.Interfaces\bin\Release\TBA.BeastModels.dll

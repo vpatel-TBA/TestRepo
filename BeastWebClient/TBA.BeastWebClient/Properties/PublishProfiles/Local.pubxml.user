@@ -1,0 +1,4057 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\BeastWebClient</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppStore.html">
+      <publishTime>04/25/2016 15:30:46</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>12/30/2015 11:17:36</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>12/30/2015 11:16:59</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>12/15/2015 14:51:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/11/2015 17:36:41</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/23/2016 13:02:14</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Common.dll">
+      <publishTime>03/23/2016 13:02:14</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Interfaces.dll">
+      <publishTime>03/23/2016 13:02:14</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Redis.dll">
+      <publishTime>03/23/2016 13:02:14</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Text.dll">
+      <publishTime>03/23/2016 13:02:14</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>12/08/2015 12:00:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>12/11/2015 17:36:42</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastInterface.dll">
+      <publishTime>03/02/2016 14:35:55</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastModels.dll">
+      <publishTime>04/01/2016 10:35:11</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastQos.Models.dll">
+      <publishTime>03/07/2016 13:52:10</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastWebClient.dll">
+      <publishTime>04/26/2016 12:37:00</publishTime>
+    </File>
+    <File Include="bin/TBA.BeastWebClient.Models.dll">
+      <publishTime>02/29/2016 12:07:41</publishTime>
+    </File>
+    <File Include="bin/TBA.CacheService.dll">
+      <publishTime>03/02/2016 14:35:55</publishTime>
+    </File>
+    <File Include="Content/css/animations.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-responsive.min.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>04/25/2016 15:30:46</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/bubble.css">
+      <publishTime>03/31/2016 12:56:21</publishTime>
+    </File>
+    <File Include="Content/css/datepicker.css">
+      <publishTime>04/25/2016 15:30:47</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>09/15/2014 16:34:44</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/css/datepicker.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/css/layout.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_b.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_bl.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_br.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_l.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_r.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_t.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_tl.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/custom_tr.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_b.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_bl.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_br.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_l.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_r.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_t.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_tl.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/datepicker_tr.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/field.png">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/images/Thumbs.db">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/js/datepicker.js">
+      <publishTime>03/31/2016 12:56:21</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/js/eye.js">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/js/jquery.js">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/js/layout.js">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/jsdate/js/utils.js">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/magnific-popup.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/owl-carousel.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/responsive.css">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/css/site.css">
+      <publishTime>12/31/2015 12:11:08</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff2">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>02/05/2016 10:56:10</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/fonts/HelveticaNeueLTStd-Cn.eot">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/HelveticaNeueLTStd-Cn.otf">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/HelveticaNeueLTStd-Cn.svg">
+      <publishTime>09/16/2014 07:40:10</publishTime>
+    </File>
+    <File Include="Content/fonts/HelveticaNeueLTStd-Cn.ttf">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/HelveticaNeueLTStd-Cn.woff">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/opensans-regular_0-webfont.eot">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/opensans-regular_0-webfont.svg">
+      <publishTime>10/09/2014 16:06:24</publishTime>
+    </File>
+    <File Include="Content/fonts/opensans-regular_0-webfont.ttf">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/opensans-regular_0-webfont.woff">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/fonts/opensans-regular_0-webfont.woff2">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Content/images/adaas-paas-bg.jpg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/ajax-loader.gif">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/app-store-bg.jpg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/ashok-mittal.jpg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/banner1.jpg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/banner2.jpg">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/banner3.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/banner5.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/banner6.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/Beast-Framework.png">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/bootstrap/glyphicons-halflings-white.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/bootstrap/glyphicons-halflings.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/bootstrap/glyphicons-halflings1.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/bootstrap/Thumbs.db">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/Cloud-Architecture.png">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/contentBg.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/dummy.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/eric-vaughn-flam.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/footerBg.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/footerMarker.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/gray-dot.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/green-line.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/green.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/how-bg.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/how-img.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/idea-factory-bg.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/inner-banner.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/inner-banner1.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/jerry-sabbagh.jpg">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/Kcg_logo.png">
+      <publishTime>02/05/2016 10:56:11</publishTime>
+    </File>
+    <File Include="Content/images/login-shadow.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logo.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logos/alert-logic.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logos/arketsmedia.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logos/aws-advanced-partner.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logos/aws.png">
+      <publishTime>02/05/2016 10:56:12</publishTime>
+    </File>
+    <File Include="Content/images/logos/bank-america.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/barclays.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/credit-suisse.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/findevr.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/forum.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/interactice-data.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/jp-morgan.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo1.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo2.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo3.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo4.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo5.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo6.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo7.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/logo8.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/market-watch.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/microsoft-azure.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/reuters.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/thomson-reuters.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/wsl.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/logos/yahoo.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/malcolm-walley.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/management-team-bg.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/media-bg.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/navBg.png">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/product-service/app-store-leverage.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/product-service/audit-trail-admin-tools.jpg">
+      <publishTime>02/05/2016 10:56:13</publishTime>
+    </File>
+    <File Include="Content/images/product-service/billing-payment-processing.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/complete-trading-solution.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/data-feed-aggregation.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/disaster-recovery.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/excel-integration.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/sdk-build.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/share-feature.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/smart-order-routing.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/product-service/ubiquitous-delivery.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/productBottomBg.gif">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/productTopBg.gif">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/rapidRv-logo.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/rapidRv-logo1.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/red.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/richard-astorga.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/right-icon.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/service-bg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/arrow-down.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/arrow-up.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-bottom.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-center.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-cross.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-cross2.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-left.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-middle.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-right.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/border-top.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/cme-graph.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/color-platee.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-2bg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-3bg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-4bg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-bg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-bigbg - Copy.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/content-bigbg.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/currenex-logo.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/dashed-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/dashedbg-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/dashedsm-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/dashedthick-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/dotted-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/doubledashed-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/doublesolid-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/DropdownOpen.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/favicon.ico">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/homer.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/kalotay-logo.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/loading.gif">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/logo.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/MinusPlusThinBlack.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/PlusMinusThinBlack.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/preset-inside.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/preset-none.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/preset-outline.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-bottom.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-center.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-cross.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-cross2.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-left.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-middle.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-right.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/selected-border-top.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/site-icon.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/solid-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/thick-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/thickdashed-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/thickdashed2-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/thickk-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/thindashed-line.jpg">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/Thumbs.db">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/Widget_UpDown1.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/site/Widget_UpDown1HoverBlack.png">
+      <publishTime>02/05/2016 10:56:14</publishTime>
+    </File>
+    <File Include="Content/images/technologists-team-bg.jpg">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/timeline-circle.png">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/timeline-line.png">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/topShadow.png">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/vinayek-singh.jpg">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/white-line.png">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/why-bg.jpg">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Content/images/yellow.png">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="ErrorPage.html">
+      <publishTime>04/13/2016 15:12:58</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Index.html">
+      <publishTime>04/20/2016 16:29:44</publishTime>
+    </File>
+    <File Include="LogSettings/Variables.xml">
+      <publishTime>04/04/2016 16:05:12</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/13/2016 15:12:54</publishTime>
+    </File>
+    <File Include="Products/VCM/105/105.htm">
+      <publishTime>04/05/2016 11:21:52</publishTime>
+    </File>
+    <File Include="Products/VCM/105/app.css">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Products/VCM/105/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/105/manifest.js">
+      <publishTime>04/13/2016 15:12:52</publishTime>
+    </File>
+    <File Include="Products/VCM/152/152.htm">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/152/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/152/manifest.js">
+      <publishTime>04/13/2016 15:12:52</publishTime>
+    </File>
+    <File Include="Products/VCM/199/199.html">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Products/VCM/199/app.css">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Products/VCM/199/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/199/manifest.js">
+      <publishTime>04/13/2016 15:12:52</publishTime>
+    </File>
+    <File Include="Products/VCM/2093/2093.htm">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Products/VCM/2093/app.css">
+      <publishTime>02/05/2016 10:56:15</publishTime>
+    </File>
+    <File Include="Products/VCM/2093/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/2093/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/2123/2123.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2123/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2123/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2123/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2125/2125.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2125/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2125/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2125/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2126/2126.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2126/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2126/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2126/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2130/2130.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2130/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2130/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2130/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2131/2131.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2131/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2131/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2131/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2132/2132.htm">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/2132/2132.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2132/app.css">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/2132/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/2132/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/2141/2141.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2141/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2141/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2141/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142/2142.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142EC/2142EC.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142EC/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142EC/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2142EC/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2143/2143.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2143/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2143/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2143/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2144/2144.html">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2144/app.css">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2144/appclass.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2144/manifest.js">
+      <publishTime>12/08/2015 11:07:16</publishTime>
+    </File>
+    <File Include="Products/VCM/2145/2145.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2145/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2145/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2145/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2146/2146.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2146/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2146/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/2146/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/451/451.htm">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/451/app.css">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/451/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/451/manifest.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/6060/6060.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/6060/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/6060/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/6060/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/805/805.htm">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/805/app.css">
+      <publishTime>04/25/2016 15:30:49</publishTime>
+    </File>
+    <File Include="Products/VCM/805/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/805/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/9010/9010.htm">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/9010/app.css">
+      <publishTime>02/22/2016 16:33:18</publishTime>
+    </File>
+    <File Include="Products/VCM/9010/appclass.js">
+      <publishTime>04/26/2016 11:28:54</publishTime>
+    </File>
+    <File Include="Products/VCM/9010/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/9074/9074.htm">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/9074/app.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Products/VCM/9074/appclass.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Products/VCM/9074/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/9075/9075.html">
+      <publishTime>03/31/2016 12:56:22</publishTime>
+    </File>
+    <File Include="Products/VCM/9075/app.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Products/VCM/9075/appclass.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Products/VCM/9075/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/9998/9998.htm">
+      <publishTime>03/31/2016 12:56:23</publishTime>
+    </File>
+    <File Include="Products/VCM/9998/app.css">
+      <publishTime>03/31/2016 12:56:23</publishTime>
+    </File>
+    <File Include="Products/VCM/9998/appclass.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Products/VCM/9998/manifest.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Products/VCM/IBIB5104/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IBIB5104/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IBIB5104/IBIB5104.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IBIB5104/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IDV2151/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IDV2151/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IDV2151/IDV2151.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/IDV2151/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/KVest6005/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/KVest6005/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/KVest6005/KVest6005.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/KVest6005/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapPrim/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapPrim/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapPrim/HTMLPage2PremResp.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapPrim/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapStrike/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapStrike/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapStrike/HTMLPage2StrikeResp.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapStrike/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVol/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVol/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVol/HTMLPage2VolResp.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVol/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVolPrimStrike/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVolPrimStrike/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/SwapVolPrimStrike/vcm_calc_SwapVolPremStrike.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/tba_hello_world/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/tba_hello_world/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/tba_hello_world/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/tba_hello_world/tba_hello_world.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_3month_fras/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_3month_fras/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_3month_fras/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_3month_fras/vcm_calc_3month_fras.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_6month_fras/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_6month_fras/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_6month_fras/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_6month_fras/vcm_calc_6month_fras.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Asset_Swap_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Asset_Swap_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Asset_Swap_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Asset_Swap_Calculator/Vcm_Calc_Asset_Swap_Calculator.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_atm_cap_vol/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_atm_cap_vol/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_atm_cap_vol/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_atm_cap_vol/vcm_calc_atm_cap_vol.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Basis_Swap_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Basis_Swap_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Basis_Swap_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Basis_Swap_Calculator/vcm_calc_Basis_Swap_Calculator.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_basis_swap_page/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_basis_swap_page/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_basis_swap_page/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_basis_swap_page/vcm_calc_basis_swap_page.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bermudan_swaption_calculator/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bermudan_swaption_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bermudan_swaption_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bermudan_swaption_calculator/vcm_calc_bermudan_swaption_calculator.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_bondlist/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_bondlist/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_bondlist/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_bondlist/vcm_calc_bondsdotcom_bondlist.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_DepthOfBook/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_DepthOfBook/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_DepthOfBook/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondsdotcom_DepthOfBook/vcm_calc_bondsdotcom_DepthOfBook.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield/appclass.js">
+      <publishTime>12/19/2015 14:21:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield/manifest.js">
+      <publishTime>12/08/2015 17:59:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield/vcm_calc_bondYield.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual/vcm_calc_bondYield_Manual.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_2/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_2/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_2/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_2/vcm_calc_bondYield_Manual.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_3/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_3/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_3/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bondYield_Manual_3/vcm_calc_bondYield_Manual.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_analyzer/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_analyzer/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_analyzer/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_analyzer/vcm_calc_bond_analyzer.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_feed_tracer/app %282%29.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_feed_tracer/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_feed_tracer/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_feed_tracer/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_feed_tracer/vcm_calc_bond_feed_tracer.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Bond_Futures/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Bond_Futures/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Bond_Futures/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Bond_Futures/vcm_calc_Bond_Futures.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_info/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_info/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_info/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_info/vcm_calc_bond_info.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Bond_Option_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Bond_Option_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Bond_Option_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Bond_Option_Calculator/Vcm_Calc_Bond_Option_Calculator.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_option_page/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_option_page/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_option_page/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_option_page/vcm_calc_bond_option_page.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_select_page/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_select_page/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_select_page/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_bond_select_page/vcm_calc_bond_select_page.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_butterfly/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_butterfly/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_butterfly/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_butterfly/vcm_calc_butterfly.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_calibration_result/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_calibration_result/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_calibration_result/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_calibration_result/vcm_calc_calibration_result.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CapFloorVols/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CapFloorVols/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CapFloorVols/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CapFloorVols/vcm_calc_CapFloorVols.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caplet_vols/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caplet_vols/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caplet_vols/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caplet_vols/vcm_calc_caplet_vols.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caps_floors_volatility_surface/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caps_floors_volatility_surface/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caps_floors_volatility_surface/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_caps_floors_volatility_surface/vcm_calc_caps_floors_volatility_surface.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Cap_Floor_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Cap_Floor_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Cap_Floor_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Cap_Floor_Calculator/vcm_calc_Cap_Floor_Calculator.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_floor_page/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_floor_page/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_floor_page/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_floor_page/vcm_calc_cap_floor_page.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_vol_grid/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_vol_grid/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_vol_grid/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cap_vol_grid/vcm_calc_cap_vol_grid.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CdsCalculator/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CdsCalculator/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CdsCalculator/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CdsCalculator/vcm_calc_CdsCalculator.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cds_switch_calculator/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cds_switch_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cds_switch_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cds_switch_calculator/vcm_calc_cds_switch_calculator.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_3m/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_3m/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_3m/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_3m/vcm_calc_cf_grid_page_3m.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_year/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_year/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_year/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_grid_page_year/vcm_calc_cf_grid_page_year.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_volatility_smile/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_volatility_smile/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_volatility_smile/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cf_volatility_smile/vcm_calc_cf_volatility_smile.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ChatApp/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ChatApp/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ChatApp/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ChatApp/vcm_calc_ChatApp.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_clearing_broker_blotter/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_clearing_broker_blotter/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_clearing_broker_blotter/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_clearing_broker_blotter/vcm_calc_clearing_broker_blotter.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMCapFloor/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMCapFloor/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMCapFloor/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMCapFloor/vcm_calc_CMCapFloor.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond/Copy of vcm_calc_CMEDSF_vs_Bond.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond/vcm_calc_CMEDSF_vs_Bond.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond_Future/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond_Future/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond_Future/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_Bond_Future/vcm_calc_CMEDSF_vs_Bond_Future.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge/test.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge/vcm_calc_CMEDSF_vs_EuroDollar_Future_Hedge.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTCIRS_Calcs/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTCIRS_Calcs/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTCIRS_Calcs/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTCIRS_Calcs/vcm_calc_CMEDSF_vs_OTCIRS_Calcs.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTC_IRS_Hedge/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTC_IRS_Hedge/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTC_IRS_Hedge/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEDSF_vs_OTC_IRS_Hedge/vcm_calc_CMEDSF_vs_OTC_IRS_Hedge.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmefuture/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmefuture/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmefuture/CME.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmefuture/CMESpecial.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmefuture/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEMaxelerDSF/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEMaxelerDSF/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEMaxelerDSF/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEMaxelerDSF/vcm_calc_CMEMaxelerDSF.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CMEMaxelerDSF/vcm_calc_CMEMaxelerDSF_common.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmeotcpage/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmeotcpage/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmeotcpage/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cmeotcpage/vcm_calc_cmeotcpage.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CME_DSF_vs_CTD_Bond/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CME_DSF_vs_CTD_Bond/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CME_DSF_vs_CTD_Bond/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CME_DSF_vs_CTD_Bond/vcm_calc_CME_DSF_vs_CTD_Bond.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cms_cmt_rsl_page/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cms_cmt_rsl_page/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cms_cmt_rsl_page/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cms_cmt_rsl_page/vcm_calc_cms_cmt_rsl_page.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_cap_floor_page/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_cap_floor_page/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_cap_floor_page/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_cap_floor_page/vcm_calc_cm_cap_floor_page.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_spread_option/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_spread_option/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_spread_option/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_spread_option/vcm_calc_cm_spread_option.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator/vcm_calc_cm_swap_calculator.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator_new/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator_new/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator_new/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_calculator_new/vcm_calc_cm_swap_calculator_new.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_grid/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_grid/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_grid/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_cm_swap_grid/vcm_calc_cm_swap_grid.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CM_Swap_Page/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CM_Swap_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CM_Swap_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CM_Swap_Page/vcm_calc_CM_Swap_Page.html">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Collar_Strangle_Corridor/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Collar_Strangle_Corridor/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Collar_Strangle_Corridor/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Collar_Strangle_Corridor/vcm_calc_Collar_Strangle_Corridor.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page/vcm_calc_collar_strangle_corridor_page.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page_mid/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page_mid/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page_mid/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_collar_strangle_corridor_page_mid/vcm_calc_collar_strangle_corridor_page_mid.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CPINSA/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CPINSA/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CPINSA/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CPINSA/vcm_calc_CPINSA.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CTD_ConversionFactor/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CTD_ConversionFactor/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CTD_ConversionFactor/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_CTD_ConversionFactor/vcm_calc_CTD_ConversionFactor.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_curve_definition/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_curve_definition/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_curve_definition/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_curve_definition/vcm_calc_curve_definition.html">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Deposit_Rates/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Deposit_Rates/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Deposit_Rates/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Deposit_Rates/vcm_calc_Deposit_Rates.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Discount_Factor/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Discount_Factor/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Discount_Factor/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Discount_Factor/Vcm_Calc_Discount_Factor.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_eonia_sonia_page/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_eonia_sonia_page/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_eonia_sonia_page/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_eonia_sonia_page/vcm_calc_eonia_sonia_page.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ESPN_Sports_Scores/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ESPN_Sports_Scores/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ESPN_Sports_Scores/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ESPN_Sports_Scores/vcm_calc_ESPN_Sports_Scores.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_european_spreadlocks/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_european_spreadlocks/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_european_spreadlocks/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_european_spreadlocks/vcm_calc_european_spreadlocks.html">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_European_Swaption/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_European_Swaption/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_European_Swaption/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_European_Swaption/vcm_calc_European_Swaption.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ExchangeDataMarketView/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ExchangeDataMarketView/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ExchangeDataMarketView/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ExchangeDataMarketView/vcm_calc_ExchangeDataMarketView.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Fed_Funds_Futures/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Fed_Funds_Futures/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Fed_Funds_Futures/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Fed_Funds_Futures/vcm_calc_Fed_Funds_Futures.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FFBasisSwapSpreads/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FFBasisSwapSpreads/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FFBasisSwapSpreads/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FFBasisSwapSpreads/vcm_calc_FFBasisSwapSpreads.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ff_curve_definition/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ff_curve_definition/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ff_curve_definition/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ff_curve_definition/vcm_calc_ff_curve_definition.html">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fincad_IR_swap/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fincad_IR_swap/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fincad_IR_swap/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fincad_IR_swap/vcm_calc_fincad_IR_swap.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixed_vs_cm_swap_calculator/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixed_vs_cm_swap_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixed_vs_cm_swap_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixed_vs_cm_swap_calculator/vcm_calc_fixed_vs_cm_swap_calculator.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixing_data/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixing_data/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixing_data/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fixing_data/vcm_calc_fixing_data.html">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page/vcm_calc_forward_swap_page.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page_large/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page_large/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page_large/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_swap_page_large/vcm_calc_forward_swap_page_large.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_treasury_switch/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_treasury_switch/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_treasury_switch/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_forward_treasury_switch/vcm_calc_forward_treasury_switch.html">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_calculator/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_calculator/vcm_calc_fra_calculator.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FRA_Diff_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FRA_Diff_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FRA_Diff_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_FRA_Diff_Page/vcm_calc_FRADiffPage.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_futures_daily/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_futures_daily/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_futures_daily/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_futures_daily/vcm_calc_fra_futures_daily.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page/vcm_calc_fra_page.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_short/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_short/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_short/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_short/vcm_calc_fra_page_short.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_small/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_small/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_small/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fra_page_small/vcm_calc_fra_page_small.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fxzeroarbitrage/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fxzeroarbitrage/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fxzeroarbitrage/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fxzeroarbitrage/vcm_calc_fxzeroarbitrage.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_bidask/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_bidask/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_bidask/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_bidask/vcm_calc_fx_cross_rates_bidask.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_flex/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_flex/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_flex/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_flex/vcm_calc_fx_cross_rates_flex.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_mid/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_mid/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_mid/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rates_mid/vcm_calc_fx_cross_rates_mid.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rate_grid/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rate_grid/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rate_grid/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_cross_rate_grid/vcm_calc_fx_cross_rate_grid.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_deposit_arbitrage/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_deposit_arbitrage/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_deposit_arbitrage/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_deposit_arbitrage/vcm_calc_fx_deposit_arbitrage.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_forward_points/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_forward_points/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_forward_points/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_forward_points/vcm_calc_fx_forward_points.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_ibor_comparison/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_ibor_comparison/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_ibor_comparison/manifest.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_ibor_comparison/vcm_calc_fx_ibor_comparison.htm">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_spot_rates/app.css">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_spot_rates/appclass.js">
+      <publishTime>12/08/2015 11:07:21</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_spot_rates/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_fx_spot_rates/vcm_calc_fx_spot_rates.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrack/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrack/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrack/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrack/vcm_calc_geoTrack.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrackerDashboard/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrackerDashboard/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrackerDashboard/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_geoTrackerDashboard/vcm_calc_geoTrackerDashboard.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gmarket_par_swap/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gmarket_par_swap/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gmarket_par_swap/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gmarket_par_swap/vcm_calc_gmarket_par_swap.html">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Gov_Asset_Swap_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Gov_Asset_Swap_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Gov_Asset_Swap_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Gov_Asset_Swap_Page/vcm_calc_Gov_Asset_Swap_Page.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gov_asset_swap_page_new/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gov_asset_swap_page_new/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gov_asset_swap_page_new/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_gov_asset_swap_page_new/vcm_calc_gov_asset_swap_page_new.html">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_iimswappagemid/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_iimswappagemid/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_iimswappagemid/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_iimswappagemid/vcm_calc_iimswappagemid.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_fra_page/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_fra_page/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_fra_page/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_fra_page/vcm_calc_imm_fra_page.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_swap_arb_page/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_swap_arb_page/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_swap_arb_page/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_imm_swap_arb_page/vcm_calc_imm_swap_arb_page.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Page/vcm_calc_IMM_Swap_Page.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Short/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Short/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Short/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IMM_Swap_Short/vcm_calc_IMM_Swap_Short.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/claro.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/dojo.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/tabular.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/toggletest.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/vcm_calc_infosys.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/vcm_calc_infosystest.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys/vcm_calc_infosys_common.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys_new/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys_new/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys_new/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys_new/vcm_calc_infosys_new.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_infosys_new/vcm_calc_infosys_new_common.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page/vcm_calc_Inf_Swap_Page.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page_Mid/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_Swap_Page_Mid/vcm_calc_Inf_Swap_Page_Mid.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_ZC_Swap_Page_Mid/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_ZC_Swap_Page_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_ZC_Swap_Page_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Inf_ZC_Swap_Page_Mid/vcm_calc_Inf_ZC_Swap_Page_Mid.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoiceswap/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoiceswap/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoiceswap/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoiceswap/vcm_calc_invoiceswap.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_compositepage/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_compositepage/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_compositepage/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_compositepage/vcm_calc_invoice_compositepage.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/Copy of vcm_calc_invoice_spread_analysis.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/oldvcm_calc_invoice_spread_analysis.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_invoice_spread_analysis/vcm_calc_invoice_spread_analysis.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IRF_Convexity_Adjustment/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IRF_Convexity_Adjustment/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IRF_Convexity_Adjustment/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IRF_Convexity_Adjustment/vcm_calc_IRF_Convexity_Adjustment.html">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irsfuture/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irsfuture/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irsfuture/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irsfuture/vcm_calc_irsfuture.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_EurodollarFuture_Hedge/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_EurodollarFuture_Hedge/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_EurodollarFuture_Hedge/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_EurodollarFuture_Hedge/vcm_calc_irs_vs_EurodollarFuture_Hedge.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_TreasuryFuture_Hedge/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_TreasuryFuture_Hedge/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_TreasuryFuture_Hedge/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_irs_vs_TreasuryFuture_Hedge/vcm_calc_irs_vs_TreasuryFuture_Hedge.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures/vcm_calc_IR_Futures.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures_Wide/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures_Wide/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures_Wide/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_IR_Futures_Wide/vcm_calc_IR_Futures_Wide.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ISDAFix/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ISDAFix/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ISDAFix/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ISDAFix/vcm_calc_ISDAFix.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kalotay_bond_analyzer/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kalotay_bond_analyzer/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kalotay_bond_analyzer/appclass.js2">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kalotay_bond_analyzer/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kalotay_bond_analyzer/vcm_calc_kalotay_bond_analyzer.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_bondlist/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_bondlist/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_bondlist/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_bondlist/vcm_calc_kcg_bondpoint_bondlist.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_DepthOfBook/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_DepthOfBook/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_DepthOfBook/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_kcg_bondpoint_DepthOfBook/vcm_calc_kcg_bondpoint_DepthOfBook.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits/vcm_calc_manual_deposits.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits_full/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits_full/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits_full/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_manual_deposits_full/vcm_calc_manual_deposits_full.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_market_indicator/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_market_indicator/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_market_indicator/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_market_indicator/vcm_calc_market_indicator.html">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Market_Info/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Market_Info/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Market_Info/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Market_Info/vcm_calc_Market_Info.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MedTermSwapPage/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MedTermSwapPage/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MedTermSwapPage/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MedTermSwapPage/vcm_calc_MedTermSwapPage.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MidTermSwapPageMid/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MidTermSwapPageMid/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MidTermSwapPageMid/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_MidTermSwapPageMid/vcm_calc_MidTermSwapPageMid.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ms_ecnpricer/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ms_ecnpricer/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ms_ecnpricer/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ms_ecnpricer/vcm_calc_ms_ecnpricer.htm">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ms_ecnpricer/vcm_calc_ms_ecnpricer_common.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_news/app.css">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_news/appclass.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_news/manifest.js">
+      <publishTime>12/08/2015 11:07:22</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_news/vcm_calc_news.html">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXEuropeanOption/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXEuropeanOption/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXEuropeanOption/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXEuropeanOption/vcm_calc_NumerixFXEuropeanOption.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddle/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddle/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddle/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddle/vcm_calc_NumerixFXstraddle.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddleT/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddleT/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddleT/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstraddleT/vcm_calc_NumerixFXstraddleT.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangle/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangle/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangle/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangle/vcm_calc_NumerixFXstrangle.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangleT/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangleT/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangleT/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_NumerixFXstrangleT/vcm_calc_NumerixFXstrangleT.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_cds/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_cds/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_cds/Copy of appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_cds/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_cds/vcm_calc_numerix_cail_cds.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_ir_swap/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_ir_swap/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_ir_swap/Copy of vcm_calc_numerix_cail_ir_swap.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_ir_swap/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cail_ir_swap/vcm_calc_numerix_cail_ir_swap.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cds/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cds/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cds/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_numerix_cds/vcm_calc_numerix_cds.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_odddated_forward_swap_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_odddated_forward_swap_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_odddated_forward_swap_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_odddated_forward_swap_page/vcm_calc_odddated_forward_swap_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Odd_FRA_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Odd_FRA_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Odd_FRA_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Odd_FRA_Page/vcm_calc_Odd_FRA_Page.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_OIS_Swap_Page/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_OIS_Swap_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_OIS_Swap_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_OIS_Swap_Page/vcm_calc_OIS_Swap_Page.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Overnight_Rates/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Overnight_Rates/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Overnight_Rates/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Overnight_Rates/vcm_calc_Overnight_Rates.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_PageMonitor/app.css">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_PageMonitor/appclass.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_PageMonitor/manifest.js">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_PageMonitor/vcm_calc_PageMonitor.htm">
+      <publishTime>12/08/2015 11:07:18</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates/vcm_calc_par_swap_rates.html">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates_wide/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates_wide/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates_wide/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_par_swap_rates_wide/vcm_calc_par_swap_rates_wide.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Pers_Med_Term_Swap_Mid/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Pers_Med_Term_Swap_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Pers_Med_Term_Swap_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Pers_Med_Term_Swap_Mid/vcm_calc_Pers_Med_Term_Swap_Mid.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_pers_med_term_swap_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_pers_med_term_swap_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_pers_med_term_swap_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_pers_med_term_swap_page/vcm_calc_pers_med_term_swap_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_RGGI_options_calculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_RGGI_options_calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_RGGI_options_calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_RGGI_options_calculator/vcm_calc_RGGI_options_calculator.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ShortTermSwapPage/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ShortTermSwapPage/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ShortTermSwapPage/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_ShortTermSwapPage/vcm_calc_ShortTermSwapPage.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SimpleSwapCalculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SimpleSwapCalculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SimpleSwapCalculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SimpleSwapCalculator/vcm_calc_SimpleSwapCalculator.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Simple_Asset_Swap_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Simple_Asset_Swap_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Simple_Asset_Swap_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Simple_Asset_Swap_Calculator/vcm_calc_Simple_Asset_Swap_Calculator.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_irr_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_irr_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_irr_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_irr_page/vcm_calc_simple_irr_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_grid/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_grid/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_grid/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_grid/vcm_calc_simple_swap_grid.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_switch/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_switch/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_switch/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_simple_swap_switch/vcm_calc_simple_swap_switch.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_smile_config_swaption_vols/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_smile_config_swaption_vols/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_smile_config_swaption_vols/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_smile_config_swaption_vols/vcm_calc_smile_config_swaption_vols.html">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Between_Swaps/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Between_Swaps/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Between_Swaps/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Between_Swaps/vcm_calc_Spread_Between_Swaps.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Lock_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Lock_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Lock_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Spread_Lock_Calculator/vcm_calc_Spread_Lock_Calculator.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapBondCalculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapBondCalculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapBondCalculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapBondCalculator/vcm_calc_SwapBondCalculator.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapDiffCalculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapDiffCalculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapDiffCalculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapDiffCalculator/vcm_calc_SwapDiffCalculator.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_instrument_detail/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_instrument_detail/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_instrument_detail/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_instrument_detail/vcm_calc_SwapEx_instrument_detail.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_Instrument_List/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_Instrument_List/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_Instrument_List/HTMLPage1.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_Instrument_List/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_Instrument_List/vcm_calc_SwapEx_Instrument_List.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_TopOfBook/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_TopOfBook/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_TopOfBook/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapEx_TopOfBook/vcm_calc_SwapEx_TopOfBook.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_260/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_260/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_260/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_260/vcm_calc_SwapPX_260.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_262/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_262/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_262/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_262/vcm_calc_SwapPX_262.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_295/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_295/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_295/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapPX_295/vcm_calc_SwapPX_295.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapSwitch/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapSwitch/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapSwitch/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_SwapSwitch/vcm_calc_SwapSwitch.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrike/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrike/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrike/HTMLPage2Resp.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrike/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrike/vcm_calc_SwapVolPremStrike.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrikenew/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrikenew/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrikenew/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaptionVolPremStrikenew/vcm_calc_swaptionVolPremStrikenew.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_ab_vol_spreads/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_ab_vol_spreads/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_ab_vol_spreads/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_ab_vol_spreads/vcm_calc_swaption_ab_vol_spreads.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swaption_Historical/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swaption_Historical/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swaption_Historical/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swaption_Historical/vcm_calc_Swaption_Historical.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page/vcm_calc_swaption_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page_vol_smile/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page_vol_smile/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page_vol_smile/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_page_vol_smile/vcm_calc_swaption_page_vol_smile.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vols/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vols/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vols/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vols/vcm_calc_swaption_vols.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vol_spreads/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vol_spreads/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vol_spreads/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swaption_vol_spreads/vcm_calc_swaption_vol_spreads.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Calculator/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Calculator/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Calculator/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Calculator/vcm_calc_Swap_Calculator.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_diff_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_diff_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_diff_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_diff_page/vcm_calc_swap_diff_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_page/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_page/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_page/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_page/vcm_calc_swap_page.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Page_Horz/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Page_Horz/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Page_Horz/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Page_Horz/vcm_calc_Swap_Page_Horz.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spreads/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spreads/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spreads/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spreads/vcm_calc_swap_spreads.html">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page/vcm_calc_Swap_Spread_Page.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page_Mid/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Page_Mid/vcm_calc_Swap_Spread_Page_Mid.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Spread_Page/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Spread_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Spread_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Spread_Page/vcm_calc_Swap_Spread_Spread_Page.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_spread_page_small/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_spread_page_small/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_spread_page_small/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_spread_page_small/vcm_calc_swap_spread_spread_page_small.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_table/app.css">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_table/appclass.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_table/manifest.js">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_swap_spread_table/vcm_calc_swap_spread_table.htm">
+      <publishTime>12/08/2015 11:07:23</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Table_Mid/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Table_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Table_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Swap_Spread_Table_Mid/vcm_calc_Swap_Spread_Table_Mid.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Synthetic_FRA/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Synthetic_FRA/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Synthetic_FRA/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Synthetic_FRA/Vcm_Calc_Synthetic_FRA.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_futures/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_futures/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_futures/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_futures/vcm_calc_synthetic_futures.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_par_swaps/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_par_swaps/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_par_swaps/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_synthetic_par_swaps/vcm_calc_synthetic_par_swaps.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_CDS_CDSRisk/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_CDS_CDSRisk/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_CDS_CDSRisk/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_CDS_CDSRisk/vcm_calc_TC_CDS_CDSRisk.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_infcapfloor/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_infcapfloor/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_infcapfloor/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_infcapfloor/vcm_calc_tc_infcapfloor.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infcpi/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infcpi/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infcpi/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infcpi/vcm_calc_tc_inf_infcpi.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infzero/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infzero/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infzero/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_inf_infzero/vcm_calc_tc_inf_infzero.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_interest_rate_swaps/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_interest_rate_swaps/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_interest_rate_swaps/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_interest_rate_swaps/vcm_calc_tc_interest_rate_swaps.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_IRO_CapFloor/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_IRO_CapFloor/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_IRO_CapFloor/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_TC_IRO_CapFloor/vcm_calc_TC_IRO_CapFloor.htm">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_iro_swaption/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_iro_swaption/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_iro_swaption/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tc_iro_swaption/vcm_calc_tc_iro_swaption.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tipsbond_select_page/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tipsbond_select_page/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tipsbond_select_page/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tipsbond_select_page/vcm_calc_tipsbond_select_page.html">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tips_break_even_grid/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tips_break_even_grid/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tips_break_even_grid/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_tips_break_even_grid/vcm_calc_tips_break_even_grid.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView/vcm_calc_Transactional_CurrenexDetailView.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView_New/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView_New/appclass.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView_New/manifest.js">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Transactional_CurrenexDetailView_New/vcm_calc_Transactional_CurrenexDetailView_New.html">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds/vcm_calc_treasury_bonds.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds_ust_database/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds_ust_database/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds_ust_database/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_treasury_bonds_ust_database/vcm_calc_treasury_bonds_ust_database.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Tube_State_Presentation/app.css">
+      <publishTime>12/08/2015 11:07:19</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Tube_State_Presentation/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Tube_State_Presentation/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_Tube_State_Presentation/vcm_calc_Tube_State_Presentation.htm">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_libor_vs_libor_basis_swaps/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_libor_vs_libor_basis_swaps/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_libor_vs_libor_basis_swaps/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_libor_vs_libor_basis_swaps/vcm_calc_usd_libor_vs_libor_basis_swaps.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_swaps_vs_1s/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_swaps_vs_1s/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_swaps_vs_1s/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_swaps_vs_1s/vcm_calc_usd_swaps_vs_1s.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_treasuryctd/app.css">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_treasuryctd/appclass.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_treasuryctd/manifest.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_usd_treasuryctd/vcm_calc_usd_treasuryctd.htm">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChart/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChart/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChart/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChart/vcm_calc_YieldCurves_YieldCurveChart.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChartDual/app.css">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChartDual/appclass.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChartDual/manifest.js">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/vcm_calc_YieldCurves_YieldCurveChartDual/vcm_calc_YieldCurves_YieldCurveChartDual.html">
+      <publishTime>12/08/2015 11:07:20</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page/Vcm_Calc_Yield_Diff_Page.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page_Mid/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page_Mid/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page_Mid/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/Vcm_Calc_Yield_Diff_Page_Mid/Vcm_Calc_Yield_Diff_Page_Mid.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/VHD7001/app.css">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/VHD7001/appclass.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/VHD7001/manifest.js">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Products/VCM/VHD7001/VHD7001.htm">
+      <publishTime>12/08/2015 11:07:17</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/bootstrap-datepicker.js">
+      <publishTime>04/25/2016 15:30:51</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/bootstrap.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/docs.min.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/ie-emulation-modes-warning.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/ie10-viewport-bug-workaround.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/bootstrap/ie8-responsive-file-warning.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/BubbleChart.js">
+      <publishTime>04/13/2016 15:12:58</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/D3js/d3.min.js">
+      <publishTime>03/31/2016 12:56:23</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/animated-overlay.gif">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_diagonals-small_0_aaaaaa_40x40.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_diagonals-thick_15_444444_40x40.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_diagonals-thick_95_ffdc2e_40x40.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_flat_55_fbec88_40x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_55_fbf5d0_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_75_d0e5f5_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_85_dfeffc_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-hard_30_285c00_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_33_3a8104_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_50_4eb305_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_60_4ca20b_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_inset-hard_100_f5f8f9_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-bg_inset-soft_10_285c00_1x100.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_217bc0_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_222222_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_228ef1_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_454545_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_469bdd_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_4eb305_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_6da8d5_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_72b42d_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_888888_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_d8e7f3_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_f9bd01_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/images/ui-icons_ffffff_256x240.png">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.js">
+      <publishTime>04/25/2016 15:30:51</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.min.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.min.js">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.structure.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.structure.min.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.theme.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/jquery-ui.theme.min.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery-ui.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.accordion.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.all.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.autocomplete.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.base.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.button.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.core.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.datepicker.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.dialog.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.progressbar.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.resizable.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.selectable.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.slider.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.tabs.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/jqueryui/redmond/jquery.ui.theme.css">
+      <publishTime>02/05/2016 10:56:16</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/md5.js">
+      <publishTime>04/13/2016 15:12:53</publishTime>
+    </File>
+    <File Include="Scripts/ExternalLibraries/SignalR/jquery.signalR-2.2.0.min.js">
+      <publishTime>12/08/2015 11:07:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/08/2015 11:07:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.3.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.js">
+      <publishTime>04/04/2016 16:05:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.js">
+      <publishTime>04/04/2016 16:05:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.map">
+      <publishTime>04/04/2016 16:05:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.1.js">
+      <publishTime>04/08/2016 09:12:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.1.min.js">
+      <publishTime>04/08/2016 09:12:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.2.1.min.map">
+      <publishTime>04/08/2016 09:12:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery.magnific-popup.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.0.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/PageScript/AppListPageScript.js">
+      <publishTime>01/21/2016 16:47:56</publishTime>
+    </File>
+    <File Include="Scripts/PageScript/AppStorePageScript.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Scripts/PageScript/SharedAppPageScript.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Scripts/Services/ApplicationManager.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Scripts/Services/AuthenticationService.js">
+      <publishTime>04/20/2016 16:29:44</publishTime>
+    </File>
+    <File Include="Scripts/Services/BubbleChart.js">
+      <publishTime>03/31/2016 12:56:24</publishTime>
+    </File>
+    <File Include="Scripts/Services/LogService.js">
+      <publishTime>04/05/2016 11:00:15</publishTime>
+    </File>
+    <File Include="Scripts/Services/SignalrService.js">
+      <publishTime>04/26/2016 11:28:55</publishTime>
+    </File>
+    <File Include="Scripts/Services/UpdateProcessorService.js">
+      <publishTime>04/26/2016 11:28:56</publishTime>
+    </File>
+    <File Include="Scripts/Shared/Comman.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/Shared/Config.js">
+      <publishTime>04/13/2016 15:12:54</publishTime>
+    </File>
+    <File Include="Scripts/Shared/ExtentionMethods.js">
+      <publishTime>12/08/2015 11:07:25</publishTime>
+    </File>
+    <File Include="Scripts/site/bootstrap.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/site/common.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/site/css3-animate-it.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/f2.min.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/FormatScript.js">
+      <publishTime>02/05/2016 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/site/jquery.jmsajax.min.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/jquery.numeric.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/npm.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/owl-carousel.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/ShareCalculator.js">
+      <publishTime>04/26/2016 11:28:56</publishTime>
+    </File>
+    <File Include="Scripts/site/site.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/smoothscroll.js">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Scripts/site/VCMCommon.js">
+      <publishTime>04/26/2016 11:28:56</publishTime>
+    </File>
+    <File Include="Scripts/site/VolSeparate.js">
+      <publishTime>12/31/2015 16:48:36</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/BasisWidget/basisWidgetScript.js">
+      <publishTime>04/13/2016 15:12:54</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/globalScript.js">
+      <publishTime>12/08/2015 11:07:26</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/htmlTemplate.js">
+      <publishTime>12/08/2015 11:07:26</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/PriceWidget/priceWidgetScript.js">
+      <publishTime>01/18/2016 14:24:07</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/PriceWidget/priceWidgetScriptDecimal.js">
+      <publishTime>01/18/2016 16:40:24</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/PriceWidget/priceWidgetScriptMobile.js">
+      <publishTime>04/13/2016 15:12:54</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/ShareCalculator.js">
+      <publishTime>12/31/2015 16:40:33</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/TermWidget/termWidgetScript.js">
+      <publishTime>01/07/2016 19:29:17</publishTime>
+    </File>
+    <File Include="Scripts/site/widgets/TermWidget/termWidgetScriptMobile.js">
+      <publishTime>04/13/2016 15:12:54</publishTime>
+    </File>
+    <File Include="SharedApp.html">
+      <publishTime>04/25/2016 15:30:53</publishTime>
+    </File>
+    <File Include="Views/Home/AppStore.cshtml">
+      <publishTime>04/04/2016 16:05:17</publishTime>
+    </File>
+    <File Include="Views/Home/AppStore.html">
+      <publishTime>04/04/2016 16:05:18</publishTime>
+    </File>
+    <File Include="Views/Home/AppStore1.cshtml">
+      <publishTime>12/31/2015 16:48:36</publishTime>
+    </File>
+    <File Include="Views/Home/ErrorPage.cshtml">
+      <publishTime>03/31/2016 12:56:25</publishTime>
+    </File>
+    <File Include="Views/Home/ErrorPage.html">
+      <publishTime>04/04/2016 16:05:18</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/31/2016 12:56:25</publishTime>
+    </File>
+    <File Include="Views/Home/Index.html">
+      <publishTime>04/04/2016 16:09:07</publishTime>
+    </File>
+    <File Include="Views/Home/SharedApp.cshtml">
+      <publishTime>03/31/2016 12:56:25</publishTime>
+    </File>
+    <File Include="Views/Home/SharedApp.html">
+      <publishTime>04/04/2016 16:05:18</publishTime>
+    </File>
+    <File Include="Views/Home/SharedCalculator.cshtml">
+      <publishTime>02/22/2016 17:14:59</publishTime>
+    </File>
+    <File Include="Views/Home/Test.cshtml">
+      <publishTime>12/31/2015 16:48:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/31/2016 12:56:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_Master.cshtml">
+      <publishTime>02/05/2016 10:56:18</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>04/04/2016 16:05:18</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/31/2016 12:56:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/05/2016 11:24:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+/**
+ * All selectors must have .YOUR_APP_ID as a prefix. 
+ */
+._199 table
+{
+    margin: 0;
+}
+
+._199 tbody td
+{
+    text-align: right;
+}
+
+._199 .last
+{
+}
+
+._199 .last-change
+{
+    font-size: 80%;
+}
+
+._199 .positive
+{
+    color: green;
+}
+
+._199 .negative
+{
+    color: red;
+}
+
+._199 .input-append
+{
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+._199 p.hi
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[readonly]
+{
+    cursor: pointer !important;
+    background-color: #eeeeee;
+}
+
+#199_5 {
+    width:7.70em;
+}
+
+#199_1 {
+    width:7.70em;
+}
